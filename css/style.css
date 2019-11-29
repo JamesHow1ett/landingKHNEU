@@ -39,6 +39,10 @@
   margin-left: 100px;
 }
 
+.active {
+  font-family: 'Roboto Bold', sans-serif;
+}
+
 @font-face {
   font-family: 'Roboto Light';
   src: url("../fonts/Roboto-Light.eot");
