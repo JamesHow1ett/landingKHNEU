@@ -12,6 +12,21 @@
       margin: 5px
     &__block:first-child
       margin-top: 50px
+  .info
+    &__title
+      text-align: center
+    &__subtitle
+      text-align: center
+    &__logo
+      display: none
+    &__text
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      width: 100%
+      margin-top: 55px
+      font-size: 30px
 @media (max-width: 940px)
   .container
     max-width: 750px
@@ -23,9 +38,14 @@
       margin: 5px
     &__block:first-child
       margin-top: 20px
+  .info
+    &__text
+      margin-top: 35px
 @media (max-width: 734px)
+  .header
+    background-size: cover
   .container
-    max-width: 100%
+    max-width: 580px
   .menu
     &__nav
       margin-bottom: 0
@@ -34,6 +54,15 @@
   .social-btn
     &__block:first-child
       margin-top: 0
+  .info
+    &__title
+      font-size: 50px
+    &__subtitle
+      font-size: 34px
+    &__text
+      margin-top: 30px
+      &-text
+        margin-bottom: 45px
 @media (max-width: 576px)
   .menu
     &__nav
@@ -50,6 +79,9 @@
     &__img
       height: 73px
       max-width: 80px
+  .info
+    &__text
+      font-size: 25px
 @media (max-width: 400px)
   .menu
     &__link:first-child
