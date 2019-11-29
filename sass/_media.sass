@@ -1,4 +1,6 @@
 @media (max-width:  1280px)
+  .container
+    max-width: 990px
   .header
     background-size: cover
   .menu
@@ -11,6 +13,8 @@
     &__block:first-child
       margin-top: 50px
 @media (max-width: 940px)
+  .container
+    max-width: 750px
   .menu
     &__link
       margin-right: 20px
@@ -20,6 +24,8 @@
     &__block:first-child
       margin-top: 20px
 @media (max-width: 734px)
+  .container
+    max-width: 100%
   .menu
     &__nav
       margin-bottom: 0
@@ -34,8 +40,6 @@
       margin-bottom: 0
     &__link
       font-size: 14px
-    &__link:first-child
-      margin-left: 10px
   .social-btn
     flex-direction: row
     align-items: center
@@ -46,3 +50,7 @@
     &__img
       height: 73px
       max-width: 80px
+@media (max-width: 400px)
+  .menu
+    &__link:first-child
+      margin-left: 10px
