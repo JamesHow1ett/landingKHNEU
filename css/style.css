@@ -1,6 +1,96 @@
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
+.container {
+  max-width: 1470px;
+  margin: auto;
+}
+
+.header {
+  background-color: #ebedf1;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 150px;
+  background-color: #5A1Bff;
+  border-radius: 0 0 50px 50px;
+}
+
+.menu__nav {
+  margin-bottom: 50px;
+}
+
+.menu__link {
+  text-decoration: none;
+  font-size: 44px;
+  margin-right: 60px;
+  color: #ffffff;
+}
+
+.menu__link:first-child {
+  margin-left: 100px;
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url("../fonts/Roboto-Light.eot");
+  src: url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url("../fonts/Roboto-Bold.eot");
+  src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Roboto Light', sans-serif;
+}
+
+.hero {
+  background: #E5E5E5 url("../img/hero/bg-header.png") no-repeat center;
+  background-size: cover;
+  margin-top: -50px;
+  padding-bottom: 805px;
+}
+
+.social-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  float: right;
+  min-width: 180px;
+  background-color: #5A1Bff;
+  border-radius: 0 0 0 50px;
+}
+
+.social-btn__block {
+  margin: 25px 0;
+  padding: 5px 10px;
+}
+
+.social-btn__block:first-child {
+  margin-top: 50px;
+}
 /*# sourceMappingURL=style.css.map */
