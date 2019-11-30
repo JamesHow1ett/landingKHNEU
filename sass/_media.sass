@@ -41,6 +41,12 @@
   .info
     &__text
       margin-top: 35px
+  .about
+    &-card
+      &__title
+        font-size: 40px
+      &__img
+        display: none
 @media (max-width: 734px)
   .header
     background-size: cover
@@ -63,15 +69,20 @@
       margin-top: 30px
       &-text
         margin-bottom: 45px
+  .about
+    &-card
+      padding: 20px
+      grid-template-columns: auto
 @media (max-width: 576px)
+  .container
+    max-width: 100%
   .menu
     &__nav
       margin-bottom: 0
     &__link
       font-size: 14px
   .social-btn
-    flex-direction: row
-    align-items: center
+    display: none
     &__block
       max-width: 80px
     &__block:last-child
@@ -82,7 +93,15 @@
   .info
     &__text
       font-size: 25px
+  .about
+    &-card
+      &__title
+        font-size: 25px
 @media (max-width: 400px)
+  .container
+    max-width: 100%
+  .navbar
+    max-width: 100%
   .menu
     &__link:first-child
       margin-left: 10px
