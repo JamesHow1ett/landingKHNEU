@@ -57,6 +57,14 @@
         font-size: 40px
       &__img
         display: none
+  .footer
+    &-info
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      &__rights
+        margin-bottom: 20px
 @media (max-width: 734px)
   .header
     background-size: cover
@@ -83,6 +91,11 @@
     &-card
       padding: 20px
       grid-template-columns: auto
+  .footer
+    &__img
+      display: none
+    &__rights
+      margin-bottom: 20px
 @media (max-width: 576px)
   .container
     max-width: 100%
@@ -116,6 +129,9 @@
   .form
     &__button
       font-size: 25px
+  .footer
+    &__link
+      font-size: 20px
 @media (max-width: 400px)
   .container
     max-width: 100%
