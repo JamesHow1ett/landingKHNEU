@@ -1,0 +1,35 @@
+.register
+  &-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-form
+    max-width: 100%
+    text-align: center
+    &__title
+      margin-bottom: 0
+      text-transform: uppercase
+      font-size: 74px
+      color: $primary
+      +bold
+    &__subtitle
+      font-size: 30px
+      line-height: 47px
+      color: $primary
+.form
+  display: flex
+  flex-direction: column
+  margin-top: 60px
+  border: 2px solid $primary
+  &__input
+    background-color: #E5E5E5
+    border-bottom: 1px solid $primary
+  &__button
+    margin: 60px
+    padding: 20px 55px
+    background-color: $primary
+    color: #ffffff
+    font-size: 40px
+    text-transform: lowercase
+    &:hover
+      cursor: pointer

@@ -9,7 +9,7 @@
 }
 
 .section {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .section:last-child {
@@ -35,6 +35,34 @@
 body {
   background-color: #E5E5E5;
   font-family: 'Roboto Light', sans-serif;
+}
+
+.input {
+  height: 52px;
+  margin: 40px 65px;
+  padding: 0 5px;
+  border: none;
+  color: #5A1Bff;
+}
+
+::-webkit-input-placeholder {
+  color: #5A1Bff;
+  font-size: 24px;
+}
+
+:-ms-input-placeholder {
+  color: #5A1Bff;
+  font-size: 24px;
+}
+
+::-ms-input-placeholder {
+  color: #5A1Bff;
+  font-size: 24px;
+}
+
+::placeholder {
+  color: #5A1Bff;
+  font-size: 24px;
 }
 
 .header {
@@ -76,6 +104,10 @@ body {
   font-size: 30px;
   margin-right: 60px;
   color: #ffffff;
+}
+
+.menu__link:hover {
+  text-decoration: underline;
 }
 
 .menu__link:first-child {
@@ -260,6 +292,67 @@ body {
   max-height: 100%;
 }
 
+.register-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register-form {
+  max-width: 100%;
+  text-align: center;
+}
+
+.register-form__title {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 74px;
+  color: #5A1Bff;
+  font-family: 'Roboto Bold', sans-serif;
+}
+
+.register-form__subtitle {
+  font-size: 30px;
+  line-height: 47px;
+  color: #5A1Bff;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 60px;
+  border: 2px solid #5A1Bff;
+}
+
+.form__input {
+  background-color: #E5E5E5;
+  border-bottom: 1px solid #5A1Bff;
+}
+
+.form__button {
+  margin: 60px;
+  padding: 20px 55px;
+  background-color: #5A1Bff;
+  color: #ffffff;
+  font-size: 40px;
+  text-transform: lowercase;
+}
+
+.form__button:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 1280px) {
   .container {
     max-width: 990px;
@@ -305,6 +398,14 @@ body {
     width: 100%;
     margin-top: 55px;
     font-size: 30px;
+  }
+  .register-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .register-img {
+    display: none;
   }
 }
 
@@ -394,6 +495,15 @@ body {
     font-size: 25px;
   }
   .about-card__title {
+    font-size: 25px;
+  }
+  .register-form__title {
+    font-size: 54px;
+  }
+  .register-form__subtitle {
+    display: none;
+  }
+  .form__button {
     font-size: 25px;
   }
 }
