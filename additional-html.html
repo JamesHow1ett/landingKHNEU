@@ -1,0 +1,554 @@
+<!-- <additionalhtmlhead> -->
+<link rel="stylesheet" href="/www/pns/PNS/assets/font-awesome/css/font-awesome.min.css">
+<meta name="description"
+	content="Сайт персональних навчальних систем Харківського національного економічного університету імені Семена Кузнеця |  Personal learning systems site of the Simon Kuznets Kharkiv National University of Economics">
+<!-- </additionalhtmlhead> -->
+
+<!-- <additionalhtmltopofbody> -->
+<style type="text/css">
+	@-moz-document url-prefix() {
+		#imguniversity:before {
+			content: url("/assets/img/univer.png") !important;
+			display: flex;
+		}
+
+		@media (max-width: 1024px) {
+			#imguniversity:before {
+				content: url("/assets/img/univer1024.png") !important;
+			}
+		}
+
+		@media (max-width: 640px) {
+			#imguniversity:before {
+				content: url("/assets/img/univer640.png") !important;
+			}
+		}
+	}
+</style>
+<!-- </additionalhtmltopofbody> -->
+
+<!-- <additionalhtmlfooter> -->
+<!--<for declared const's>-->
+<script>
+	const page_course_index = document.getElementById('page-course-index');
+	const page_course_index_category = document.getElementById('page-course-index-category');
+	const page_course_search = document.getElementById('page-course-search');
+	const page_course_view_topics = document.getElementById('page-course-view-topics');
+	const page_enrol_index = document.getElementById('page-enrol-index');
+	const page_grade_report_overview_index = document.getElementById('page-grade-report-overview-index');
+	const page_grade_report_grader_index = document.getElementById('page-grade-report-grader-index');
+	const page_grade_report_singleview_index = document.getElementById("page-grade-report-singleview-index");
+	const page_header = document.getElementById('page-header');
+	const page_login_change_password = document.getElementById('page-login-change_password');
+	const page_message_index = document.getElementById('page-message-index');
+	const page_message_edit = document.getElementById('page-message-edit');
+	const page_message_notificationpreferences = document.getElementById('page-message-notificationpreferences');
+	const page_mod_attendance_manage = document.getElementById('page-mod-attendance-manage');
+	const page_mod_assign_grading = document.getElementById('page-mod-assign-grading');
+	const page_my_index = document.getElementById("page-my-index");
+	const page_site_index = document.getElementById('page-site-index');
+	const page_user_files = document.getElementById('page-user-files');
+	const page_user_profile = document.getElementById("page-user-profile");
+	const page_user_preferences = document.getElementById('page-user-preferences');
+	const page_user_language = document.getElementById('page-user-language');
+	const page_user_editadvanced = document.getElementById('page-user-editadvanced');
+	const page_user_forum = document.getElementById('page-user-forum');
+	const page_user_editor = document.getElementById('page-user-editor');
+	const page_user_course = document.getElementById('page-user-course');
+	const page_user_calendar = document.getElementById('page-user-calendar');
+	const block_region_side_pre = document.getElementById('block-region-side-pre');
+	const forumSearch = document.querySelector(".forumsearch");
+	const inst35 = document.getElementById('inst35');
+	const message_user_button = document.getElementById('message-user-button');
+	const tableElem = document.querySelector('table.flexible.generaltable.generalbox');
+	const region_main = document.getElementById('region-main');
+	const wikisearch = document.querySelector(".wikisearch");
+</script>
+<!--<const's end here>-->
+
+<!--<script for add univer image at main page>-->
+<script type="text/javascript">
+	if (page_site_index != null) {
+		let topParentElem = region_main;
+		let middleParentElem = topParentElem.getElementsByClassName('box');
+		let parentElem = middleParentElem[0];
+		let div = document.createElement('div');
+		let isIE = !!navigator.userAgent.match(/Trident/g) || !!navigator.userAgent.match(/MSIE/g);
+
+		if (isIE) {
+			div.innerHTML = '<div id="imguniversity"><img style="width: 100%" src="/assets/img/univer1024.png"></div>';
+		} else {
+			div.innerHTML = '<div id="imguniversity"><img></div>';
+		}
+		parentElem.appendChild(div);
+	}
+</script>
+<!--<end script>-->
+
+<!--<for icon in footer>-->
+<script>
+	$("i").removeClass("fa-fw iconhelp icon-pre");
+</script>
+<!--<end script>-->
+
+
+<!--<script for 100%width some content>-->
+<script>
+	if (page_course_index || page_course_index_category || page_enrol_index != null) {
+		region_main.style.width = '100%';
+	} else if (page_mod_assign_grading || page_mod_attendance_manage != null) {
+		region_main.style.width = '100%';
+		block_region_side_pre.style.display = 'none';
+	} else {
+		() => {}
+	}
+</script>
+<!--<end script>-->
+
+<!--color for upper btn -->
+<script>
+	if (page_site_index != null) {
+		let topParentElem = document.getElementById('region-main');
+		let middleParentElem = topParentElem.getElementsByClassName("btn btn-secondary");
+		let i;
+		for (let i = 0; i < middleParentElem.length - 1; i++) {
+			middleParentElem[i].style.backgroundColor = "#c0e0f9";
+			middleParentElem[i].style.borderColor = "#21409a";
+			middleParentElem[i].style.boxShadow = "none";
+			middleParentElem[i].style.color = "#21409a";
+			middleParentElem[i].onmouseout = () => {
+				middleParentElem[i].style.backgroundColor = "#c0e0f9";
+				middleParentElem[i].style.borderColor = "#21409a";
+				middleParentElem[i].style.boxShadow = "none";
+			};
+			middleParentElem[i].onmouseover = () => {
+				middleParentElem[i].style.backgroundColor = "#eff7fd";
+				middleParentElem[i].style.borderColor = "#f5f5f5";
+				middleParentElem[i].style.boxShadow = "0 7px 14px rgba(0,0,0,.15), 0 5px 5px rgba(0,0,0,.12)";
+			};
+		}
+	} else {
+		() => {}
+	}
+</script>
+<script>
+	if (page_site_index != null) {
+		let topParentElem = document.getElementById('region-main');
+		let middleParentElem = topParentElem.getElementsByClassName("navicon");
+		let i;
+		for (let i = 0; i < middleParentElem.length; i++) {
+			middleParentElem[i].style.color = "#21409a";
+		}
+	} else {
+		() => {}
+	}
+</script>
+<!--<end script>-->
+
+<!-- single btn USE ONLY FOR FORDSON-->
+<script>
+	if (page_header != null) {
+		let searchElement = document.querySelectorAll(
+			'header#page-header > div.col-12.pt-3.pb-3 > div.card > div.card-body > div.d-flex.flex-wrap > div.ml-auto.d-flex > div.singlebutton > form > button'
+		);
+		for (let i = 0; i < searchElement.length; i++) {
+			searchElement[0].style.backgroundColor = "#444e58";
+			searchElement[0].style.borderRadius = "3px";
+			searchElement[0].style.border = "0px";
+		}
+	} else {
+		() => {}
+	}
+</script>
+<!--<end script>-->
+
+<!-- single btn USE ONLY FOR FORDSON(when btn contain in div)-->
+<script>
+	if (forumSearch != null) {
+		let searchElement = forumSearch.querySelectorAll("form div button");
+		if (searchElement != null) {
+			for (let i = 0; i < searchElement.length; i++) {
+				searchElement[0].style.backgroundColor = "#444e58";
+				searchElement[0].style.borderRadius = "3px";
+				searchElement[0].style.border = "0px";
+			}
+		}
+	} else {
+		() => {}
+	}
+</script>
+<!--<end script>-->
+
+<!-- blue button on page-grade-report-grader-index -->
+<script>
+	if (page_grade_report_grader_index != null) {
+		(() => {
+			let elems = document.querySelector(".singlebutton");
+			let coincidences = elems.querySelectorAll("form button");
+			//console.log(coincidences);
+			let i;
+			if (coincidences != null) {
+				for (let i = 0; i < coincidences.length; i++) {
+					coincidences[0].style.backgroundColor = "#21409a";
+					coincidences[0].style.borderRadius = "3px";
+					coincidences[0].style.border = "0px";
+				}
+			}
+		})();
+	} else {
+		() => {}
+	}
+</script>
+<!--<end script>-->
+
+<!-- grey button on page's when div.singlebutton declared twice -->
+<script>
+	if (page_user_profile || page_my_index != null) {
+		let elems = document.querySelectorAll("form > button:last-child");
+		let i;
+		for (let i = 0; i < elems.length; i++) {
+			elems[i].style.backgroundColor = "#444e58";
+			elems[i].style.borderRadius = "3px";
+			elems[i].style.border = "0px";
+		}
+	} else {
+		() => {}
+	}
+</script>
+<!--<end script>-->
+
+<!-- grey button like everywhere -->
+<script>
+	if (page_course_search != null) {
+		let elems = document.querySelectorAll("form > fieldset > button:last-child");
+		let i;
+		for (let i = 0; i < elems.length; i++) {
+			elems[i].style.backgroundColor = "#444e58";
+			elems[i].style.borderRadius = "3px";
+			elems[i].style.border = "0px";
+		}
+	} else {
+		() => {}
+	}
+</script>
+<!--<end script>-->
+
+<!-- button wiki like forumsearch -->
+<script>
+	if (wikisearch != null) {
+		let searchElement = parentElement.querySelectorAll("form fieldset input.btn.btn-secondary");
+		if (searchElement != null) {
+			for (let i = 0; i < searchElement.length; i++) {
+				searchElement[0].style.backgroundColor = "#444e58";
+				searchElement[0].style.borderRadius = "3px";
+				searchElement[0].style.border = "0px";
+				searchElement[0].style.margin = "0 5px";
+			}
+		}
+	} else {
+		() => {}
+	}
+</script>
+<!--<end script>-->
+
+<!-- change the location of an elem in the gradebook -->
+<script>
+	if (page_grade_report_singleview_index != null) {
+		(() => {
+			let parentElement = document.querySelector(".urlselect");
+			let searchElement = parentElement.querySelectorAll("form select.custom-select.urlselect");
+			//console.log(searchElement);
+			let i;
+			if (searchElement != null) {
+				for (let i = 0; i < searchElement.length; i++) {
+					searchElement[0].style.position = 'absolute';
+					searchElement[0].style.left = "-38.6vw";
+					searchElement[0].style.top = "3.55vw";
+					searchElement[0].style.marginBottom = '15px';
+				}
+			}
+		})();
+	} else {
+		() => {}
+	}
+</script>
+<!--<end script>-->
+
+<!-- for margin on main page region-main -->
+<script>
+	if (region_main != null) {
+		let topParentElem = document.querySelectorAll("#region-main");
+		//console.log(topParentElem);
+		for (let i = 0; i < topParentElem.length; i++) {
+			topParentElem[0].style.marginTop = "31px";
+		}
+	} else {
+		() => {}
+	}
+</script>
+<!--<end script>-->
+
+<!--<hide button message on some pages>-->
+<script>
+	if (page_my_index || page_user_files || page_user_profile || page_grade_report_overview_index || page_message_index ||
+		page_user_preferences || page_user_editadvanced || page_login_change_password || page_user_language ||
+		page_user_forum || page_user_editor || page_user_course || page_user_calendar || page_message_edit ||
+		page_message_notificationpreferences != null) {
+		message_user_button.style.display = "none";
+	}
+</script>
+<!--<end script>-->
+
+<!--<hide some content on modal window course page's>-->
+<script>
+	if (document.getElementsByClassName('modal-body') != null) {
+		let elems = document.querySelectorAll("div.col-md-3.questionlinks > div.dashtitle:nth-child(n+3)");
+		let i;
+		for (let i = 0; i < elems.length; i++) {
+			elems[i].style.display = 'none';
+		}
+	} else {
+		() => {}
+	}
+</script>
+<!--<end script>-->
+
+<!--<for sticky some elems on table>-->
+<script>
+	if (tableElem != null) {
+		let rows = tableElem.rows;
+		for (let i = 0; i < rows.length; i++) {
+			rows[i].cells[2].style.position = 'sticky';
+			rows[i].cells[2].style.left = '0';
+		}
+	} else {
+		() => {}
+	}
+</script>
+<!--<end script>-->
+
+<!--<script's for news block>-->
+<!--<add styles for "li" elements>-->
+<script>
+	if (inst35 != null) {
+		let searchElement = document.querySelectorAll(
+			'div.card-body.p-3 > div.card-text.content.mt-3 > ul.unlist > li.post');
+		let i;
+		for (let i = 0; i < searchElement.length; i++) {
+			searchElement[i].style.borderBottom = "1px solid silver";
+			searchElement[i].style.padding = "3px";
+		}
+	}
+</script>
+<!--<add styles and class for "div.date">-->
+<script>
+	if (inst35 != null) {
+		let searchElement = document.querySelectorAll(
+			'div.card-body.p-3 > div.card-text.content.mt-3 > ul.unlist > li.post > div.head > div.date');
+		let i;
+		for (let i = 0; i < searchElement.length; i++) {
+			searchElement[i].style.fontStyle = "oblique";
+			searchElement[i].classList.add("fa", "fa-calendar");
+		}
+	}
+</script>
+<!--<add styles for "div.info">-->
+<script>
+	if (inst35 != null) {
+		let searchElement = document.querySelectorAll(
+			'div.card-body.p-3 > div.card-text.content.mt-3 > ul.unlist > li.post > div.info');
+		let i;
+		for (let i = 0; i < searchElement.length; i++) {
+			searchElement[i].style.fontWeight = "700";
+		}
+	}
+</script>
+<!--<add class for "div.newlink">-->
+<script>
+	if (inst35 != null) {
+		let searchElement = document.querySelectorAll('div.card-body.p-3 > div.card-text.content.mt-3 > div.newlink');
+		let i;
+		for (let i = 0; i < searchElement.length; i++) {
+			searchElement[i].classList.add("fa", "fa-pencil");
+		}
+	}
+</script>
+<!--<add class for "h5" element>-->
+<script>
+	if (inst35 != null) {
+		let searchElement = document.querySelectorAll('div.card-body.p-3 > h5#instance-35-header');
+		let i;
+		for (let i = 0; i < searchElement.length; i++) {
+			searchElement[i].classList.add("fa", "fa-newspaper-o");
+			searchElement[i].style.fontSize = "1.55em";
+		}
+	}
+</script>
+<!--<end script>-->
+
+<!--<code for dynamic link in teacher_block>-->
+<!--/\bcourse-(\d+)$/i;-->
+<script>
+	if (page_course_view_topics != null) {
+		let classToString = page_course_view_topics.classList.toString();
+		let re = new RegExp("course-([0-9]+)");
+		let coincidences = re.exec(classToString);
+		if (coincidences[1] != null) {
+			let topParentElem = document.getElementById('block-region-side-pre');
+			let middleParentElem = topParentElem.getElementsByClassName('teachers-block');
+			let parentElem = middleParentElem[0];
+			let div = document.createElement('div');
+			div.innerHTML =
+				`<div class="teachers-block__elem"><a href="http://pns-stat.hneu.edu.ua/pns/${coincidences[1]}" class="inst-btn" target="_blank">Картка ПНС</a></div>`;
+			parentElem.appendChild(div);
+		}
+	} else {
+		() => {}
+	}
+</script>
+<!--<end script>-->
+
+<!--<script for market-blocks>-->
+<script>
+	if (page_site_index || page_my_index != null) {
+		let searchElement = document.querySelectorAll(
+			'section#region-main > div.markettiles > div.container-fluid > div.row > div.col-md-4 > div.market-tile');
+		for (let i = 0; i < searchElement.length; i++) {
+			searchElement[i].style.borderTop = "10px solid #21409a";
+		}
+		let secondSearchElement = document.querySelectorAll(
+			'section#region-main > div.markettiles > div.container-fluid > div.row > div.col-md-4 > div.market-tile > a.btn.btn-primary'
+		);
+		for (let i = 0; i < secondSearchElement.length; i++) {
+			secondSearchElement[i].style.backgroundColor = "#21409a";
+			secondSearchElement[i].style.borderColor = "#21409a";
+			secondSearchElement[i].onmouseout = () => {
+				secondSearchElement[i].style.backgroundColor = "#21409a";
+				secondSearchElement[i].style.borderColor = "#21409a";
+			}
+			secondSearchElement[i].onmouseover = () => {
+				secondSearchElement[i].style.backgroundColor = "#182f70";
+				secondSearchElement[i].style.borderColor = "#182f70";
+			}
+		}
+	} else {
+		() => {}
+	}
+</script>
+<!--<end script>-->
+
+<!--<footer_contacts>-->
+<div class="main_footer_contacts">
+	<!--ukrainian contacts footer version-->
+	<div class="footer_contacts_uk">
+		<p>Харківський національний економічний університет імені Семена Кузнеця<p>
+				<p>Відділ електронних засобів навчання</p>
+				<p><a href="mailto:moodlehneu@gmail.com"><b>moodlehneu@gmail.com</b></a></p>
+				<p>© 2009-2019<p>
+	</div>
+	<!--russian contacts footer version-->
+	<div class="footer_contacts_ru">
+		<p>Харьковский национальный экономический университет имени Семена Кузнеца<p>
+				<p>Отдел электронных средств обучения</p>
+				<p><a href="mailto:moodlehneu@gmail.com"><b>moodlehneu@gmail.com</b></a></p>
+				<p>© 2009-2019<p>
+	</div>
+	<!--english contacts footer version-->
+	<div class="footer_contacts_en">
+		<p>Simon Kuznets Kharkiv National University of Economics</p>
+		<p>E-learning tools Department</p>
+		<p><a href="mailto:moodlehneu@gmail.com"><b>moodlehneu@gmail.com</b></a></p>
+		<p>© 2009-2019<p>
+	</div>
+	<!--german contacts footer version-->
+	<div class="footer_contacts_de">
+		<p>Simon Kuznets Kharkiv National University of Economics</p>
+		<p>E-learning tools Department</p>
+		<p><a href="mailto:moodlehneu@gmail.com"><b>moodlehneu@gmail.com</b></a></p>
+		<p>© 2009-2019<p>
+	</div>
+	<!--french contacts footer version-->
+	<div class="footer_contacts_fr">
+		<p>Simon Kuznets Kharkiv National University of Economics</p>
+		<p>E-learning tools Department</p>
+		<p><a href="mailto:moodlehneu@gmail.com"><b>moodlehneu@gmail.com</b></a></p>
+		<p>© 2009-2019<p>
+	</div>
+</div>
+<!--</footer_contacts>-->
+<!-- </additionalhtmlfooter> -->
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type="text/javascript">
+	(function () {
+		var widget_id = 'mte9IY9e4S';
+		var d = document;
+		var w = window;
+
+		function l() {
+			var s = document.createElement('script');
+			s.type = 'text/javascript';
+			s.async = true;
+			s.src = '//code.jivosite.com/script/widget/' + widget_id;
+			var ss = document.getElementsByTagName('script')[0];
+			ss.parentNode.insertBefore(s, ss);
+		}
+		if (d.readyState == 'complete') {
+			l();
+		} else {
+			if (w.attachEvent) {
+				w.attachEvent('onload', l);
+			} else {
+				w.addEventListener('load', l, false);
+			}
+		}
+	})();
+</script>
+<!-- {/literal} END JIVOSITE CODE -->
+
+
+
+<!--<declare const's>-->
+<script>
+	const page = document.getElementById('page');
+</script>
+<!--<end script>-->
+
+<!-- code for moove threme -->
+<script>
+	if (page != null) {
+		let searchElement = document.querySelectorAll('div.frontpage-marketing.row > div.col-md-3 > div.card');
+		let i;
+		for (let i = 0; i < searchElement.length; i++) {
+			searchElement[i].style.minHeight = "740px";
+			searchElement[i].style.display = "table";
+		}
+	}
+</script>
+
+<script>
+	if (page != null) {
+		let searchElement = document.querySelectorAll(
+			'div.frontpage-marketing.row > div.col-md-3 > div.card > div.card-body');
+		let i;
+		for (let i = 0; i < searchElement.length; i++) {
+			searchElement[i].style.display = "table-cell";
+			searchElement[i].style.verticalAlign = "middle";
+		}
+	}
+</script>
+
+<script>
+	if (page != null) {
+		let searchElement = document.querySelectorAll(
+			'div.frontpage-marketing.row > div.col-md-3 > div.card > div.card-body > a');
+		let i;
+		for (let i = 0; i < searchElement.length; i++) {
+			searchElement[i].style.position = "absolute";
+			searchElement[i].style.zIndex = "2";
+			searchElement[i].style.bottom = "20px";
+			searchElement[i].style.left = "50%";
+			searchElement[i].style.transform = "translateX(-50%)";
+			searchElement[i].style.maxWidth = "110px";
+		}
+	}
+</script>
