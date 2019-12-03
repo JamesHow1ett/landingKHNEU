@@ -112,10 +112,23 @@ body {
 
 .menu__link:first-child {
   margin-left: 100px;
+  font-family: 'Roboto Bold', sans-serif;
 }
 
-.active {
-  font-family: 'Roboto Bold', sans-serif;
+#goToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  z-index: 99;
+  border: none;
+  border-radius: 50%;
+  background-color: #5A1Bff;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .social-btn {
@@ -189,11 +202,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 150px;
 }
 
 .info__logo {
   position: relative;
-  margin-top: -100px;
+  margin-top: -50px;
 }
 
 .info__logo img {
@@ -203,7 +217,7 @@ body {
 }
 
 .info__text {
-  margin-top: 135px;
+  margin-top: 105px;
   font-size: 50px;
   text-align: right;
   color: #5A1Bff;
@@ -406,6 +420,9 @@ body {
 }
 
 .ask-contacts__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 10px;
   text-decoration: none;
   font-size: 30px;
@@ -420,6 +437,10 @@ body {
   margin-right: 10px;
 }
 
+.ask-contacts__link-text {
+  display: inline-block;
+}
+
 .ask-contacts__link:hover {
   text-decoration: underline;
 }
@@ -429,7 +450,7 @@ body {
 }
 
 .ask__img-img {
-  margin-top: -140px;
+  margin-top: -80px;
   max-width: 950px;
   max-height: 850px;
 }
@@ -628,7 +649,7 @@ body {
     margin-bottom: 0;
   }
   .menu__link {
-    font-size: 14px;
+    font-size: 15px;
   }
   .social-btn {
     display: none;
@@ -671,7 +692,42 @@ body {
     max-width: 100%;
   }
   .menu__link:first-child {
-    margin-left: 10px;
+    margin-left: 5px;
+  }
+  .about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 4fr;
+        grid-template-columns: 4fr;
+    -ms-grid-rows: 4fr 4fr 4fr 4fr;
+        grid-template-rows: 4fr 4fr 4fr 4fr;
+  }
+  .about-card__first, .about-card__dark, .about-card__third, .about-card__last {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+  }
+  .about-card__first {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .about-card__dark {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .about-card__third {
+    -ms-grid-row: 4;
+    grid-row: 4/4;
+  }
+  .about-card__last {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  .about-card__title {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

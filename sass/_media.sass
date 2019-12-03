@@ -103,7 +103,7 @@
     &__nav
       margin-bottom: 0
     &__link
-      font-size: 14px
+      font-size: 15px
   .social-btn
     display: none
     &__block
@@ -139,4 +139,24 @@
     max-width: 100%
   .menu
     &__link:first-child
-      margin-left: 10px
+      margin-left: 5px
+  .about
+    display: grid
+    grid-template-columns: 4fr
+    grid-template-rows: 4fr 4fr 4fr 4fr
+    &-card
+      &__first,
+      &__dark,
+      &__third,
+      &__last
+        grid-column: 1/4
+      &__first
+        grid-row: 1/2
+      &__dark
+        grid-row: 2/3
+      &__third
+        grid-row: 4/4
+      &__last
+        grid-row: 3/4
+      &__title
+        text-align: center

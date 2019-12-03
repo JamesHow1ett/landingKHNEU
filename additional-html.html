@@ -34,6 +34,7 @@
 	const page_course_index_category = document.getElementById('page-course-index-category');
 	const page_course_search = document.getElementById('page-course-search');
 	const page_course_view_topics = document.getElementById('page-course-view-topics');
+	const page_course_view_weeks = document.getElementById('page-course-view-weeks');
 	const page_enrol_index = document.getElementById('page-enrol-index');
 	const page_grade_report_overview_index = document.getElementById('page-grade-report-overview-index');
 	const page_grade_report_grader_index = document.getElementById('page-grade-report-grader-index');
@@ -402,34 +403,18 @@
 				`<div class="teachers-block__elem"><a href="http://pns-stat.hneu.edu.ua/pns/${coincidences[1]}" class="inst-btn" target="_blank">Картка ПНС</a></div>`;
 			parentElem.appendChild(div);
 		}
-	} else {
-		() => {}
-	}
-</script>
-<!--<end script>-->
-
-<!--<script for market-blocks>-->
-<script>
-	if (page_site_index || page_my_index != null) {
-		let searchElement = document.querySelectorAll(
-			'section#region-main > div.markettiles > div.container-fluid > div.row > div.col-md-4 > div.market-tile');
-		for (let i = 0; i < searchElement.length; i++) {
-			searchElement[i].style.borderTop = "10px solid #21409a";
-		}
-		let secondSearchElement = document.querySelectorAll(
-			'section#region-main > div.markettiles > div.container-fluid > div.row > div.col-md-4 > div.market-tile > a.btn.btn-primary'
-		);
-		for (let i = 0; i < secondSearchElement.length; i++) {
-			secondSearchElement[i].style.backgroundColor = "#21409a";
-			secondSearchElement[i].style.borderColor = "#21409a";
-			secondSearchElement[i].onmouseout = () => {
-				secondSearchElement[i].style.backgroundColor = "#21409a";
-				secondSearchElement[i].style.borderColor = "#21409a";
-			}
-			secondSearchElement[i].onmouseover = () => {
-				secondSearchElement[i].style.backgroundColor = "#182f70";
-				secondSearchElement[i].style.borderColor = "#182f70";
-			}
+	} else if (page_course_view_weeks != null) {
+		let classToString = page_course_view_weeks.classList.toString();
+		let re = new RegExp("course-([0-9]+)");
+		let coincidences = re.exec(classToString);
+		if (coincidences[1] != null) {
+			let topParentElem = document.getElementById('block-region-side-pre');
+			let middleParentElem = topParentElem.getElementsByClassName('teachers-block');
+			let parentElem = middleParentElem[0];
+			let div = document.createElement('div');
+			div.innerHTML =
+				`<div class="teachers-block__elem"><a href="http://pns-stat.hneu.edu.ua/pns/${coincidences[1]}" class="inst-btn" target="_blank">Картка ПНС</a></div>`;
+			parentElem.appendChild(div);
 		}
 	} else {
 		() => {}

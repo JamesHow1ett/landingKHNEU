@@ -12,17 +12,17 @@
 
 <body>
 
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="navbar">
         <div class="menu">
           <div class="menu-wrap">
             <nav class="menu__nav">
-              <a href="#" class="menu__link active">Головна</a>
-              <a href="#" class="menu__link">Про нас</a>
-              <a href="#" class="menu__link">Наші курси</a>
-              <a href="#" class="menu__link">Реєстрація</a>
-              <a href="#" class="menu__link">Контакти</a>
+              <a href="#header" class="menu__link">Головна</a>
+              <a href="#info" class="menu__link">Про нас</a>
+              <a href="#about" class="menu__link">Наші курси</a>
+              <a href="#register" class="menu__link">Реєстрація</a>
+              <a href="#ask" class="menu__link">Контакти</a>
             </nav>
           </div>
         </div>
@@ -50,13 +50,14 @@
         </aside>
       </div>
       <!-- /.hero -->
+      <button onclick="goToTop()" id="goToTop" title="Go to top"><span>&#8593;</span></button>
     </div>
     <!-- /.container -->
   </header>
   <!-- /.header -->
 
   <main>
-    <section class="section">
+    <section class="section" id="info">
       <div class="container">
         <div class="info">
           <h1 class="info__title">Kuznets junior university</h1>
@@ -83,10 +84,10 @@
     </section>
     <!-- /.section -->
 
-    <section class="section">
+    <section class="section" id="about">
       <div class="container">
         <div class="about">
-          <div class="about-card">
+          <div class="about-card about-card__first">
             <img src="img/about/online.png" alt="ON-line курси" class="about-card__img">
             <h2 class="about-card__title">ON-line курси</h2>
             <!-- /.about-card__title -->
@@ -119,7 +120,7 @@
     </section>
     <!-- /.section -->
 
-    <section class="section">
+    <section class="section" id="register">
       <div class="container">
         <div class="register__block register-block">
           <div class="register-img">
@@ -143,7 +144,7 @@
     </section>
     <!-- /.section -->
 
-    <section class="section">
+    <section class="section" id="ask">
       <div class="container">
         <div class="ask-block">
           <div class="ask-contacts">
@@ -151,20 +152,25 @@
             <div class="ask-contacts__contacts">
               <h3 class="ask-contacts__subtitle">Наші контакти</h3>
               <a href="#" class="ask-contacts__link">
-                <img src="img/ask/phone.png" alt="" class="ask-contacts__link-img">063-274-35-21
+                <img src="img/ask/phone.png" alt="" class="ask-contacts__link-img"><span
+                  class="ask-contacts__link-text">063-274-35-21</span>
               </a>
               <a href="#" class="ask-contacts__link">
-                <img src="img/ask/telega.png" alt="" class="ask-contacts__link-img">@KnNUE
+                <img src="img/ask/telega.png" alt="" class="ask-contacts__link-img"><span
+                  class="ask-contacts__link-text">@KnNUE</span>
               </a>
               <a href="#" class="ask-contacts__link">
-                <img src="img/ask/email.png" alt="" class="ask-contacts__link-img">kuznets.event@gmail.com
+                <img src="img/ask/email.png" alt="" class="ask-contacts__link-img"><span
+                  class="ask-contacts__link-text">kuznets.event@gmail.com</span>
               </a>
             </div>
             <div class="ask-contacts__contacts">
               <h3 class="ask-contacts__subtitle">Наша адреса</h3>
               <a href="#" class="ask-contacts__link">
-                <img src="img/ask/map.png" alt="" class="ask-contacts__link-img">м. Харків, ст.м. Наукова,<br>
-                пр-т Науки, 9А
+                <img src="img/ask/map.png" alt="" class="ask-contacts__link-img"><span
+                  class="ask-contacts__link-text">м.
+                  Харків, ст.м. Наукова,<br>
+                  пр-т Науки, 9А</span>
               </a>
             </div>
           </div>
@@ -196,6 +202,7 @@
     <!-- /.container -->
   </footer>
   <!-- /.footer -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>
