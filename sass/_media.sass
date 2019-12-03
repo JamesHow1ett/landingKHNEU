@@ -132,7 +132,9 @@
   .footer
     &__link
       font-size: 20px
-@media (max-width: 400px)
+@media (max-width: 420px)
+  .section
+    margin-bottom: 50px
   .container
     max-width: 100%
   .navbar
@@ -140,6 +142,8 @@
   .menu
     &__link:first-child
       margin-left: 5px
+  .info
+    margin-right: 5px
   .about
     display: grid
     grid-template-columns: 4fr
@@ -160,3 +164,44 @@
         grid-row: 3/4
       &__title
         text-align: center
+  .form
+    &__button
+      margin: 0
+  .ask
+    &-contacts
+      &__link
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        margin-bottom: 15px
+        &-text
+          margin-top: 10px
+@media (max-width: 360px)
+  .navbar
+    display: grid
+    grid-template-columns: auto
+    grid-template-rows: auto
+    justify-content: center
+  .menu
+    &__nav
+      display: grid
+      grid-row-gap: 10px
+      grid-template-columns: auto
+      grid-template-rows: auto
+      text-align: center
+    &__link
+      font-size: 16px
+    &__1
+      grid-row: 1/2
+    &__2
+      grid-row: 2/3
+    &__3
+      grid-row: 3/4
+    &__4
+      grid-row: 4/5
+    &__5
+      grid-row: 5/5
+  .ask
+    &-contacts
+      &__link
+        font-size: 20px
