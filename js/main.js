@@ -1,5 +1,5 @@
 const anchors = document.querySelectorAll('a[href*="#"]');
-const goToTopButton = document.getElementById('goToTop')
+const goToTopButton = document.getElementById('goToTop');
 
 for (let anchor of anchors) {
   anchor.addEventListener("click", (event) => {
@@ -13,7 +13,7 @@ for (let anchor of anchors) {
 }
 
 window.onscroll = () => {
-  scrollFunction()
+  scrollFunction();
 }
 
 const scrollFunction = () => {
