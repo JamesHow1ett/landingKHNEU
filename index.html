@@ -12,47 +12,35 @@
 <body>
 
   <header class="header" id="header">
-    <div class="container">
-      <div class="navbar">
-        <div class="menu">
-          <div class="menu-wrap">
-            <nav class="menu__nav">
-              <a href="#header" class="menu__link">Головна</a>
-              <a href="#info" class="menu__link">Про нас</a>
-              <a href="#about" class="menu__link">Наші курси</a>
-              <a href="#register" class="menu__link">Реєстрація</a>
-              <a href="#ask" class="menu__link">Контакти</a>
-            </nav>
-          </div>
-        </div>
-      </div>
-      <!-- /.navbar -->
-      <div class="hero">
-        <aside class="social-btn">
-          <div class="social-btn__block">
-            <a href="#" class="social-btn__link" target="_blank">
-              <img src="/img/hero/telegram.png" alt="" class="social-btn__img">
-            </a></div>
-          <div class="social-btn__block">
-            <a href="#" class="social-btn__link" target="_blank">
-              <img src="/img/hero/insta.png" alt="" class="social-btn__img">
-            </a></div>
-          <div class="social-btn__block">
-            <a href="#" class="social-btn__link" target="_blank">
-              <img src="/img/hero/facebook.png" alt="" class="social-btn__img">
-            </a></div>
-          <div class="social-btn__block">
-            <a href="https://www.youtube.com/watch?v=AiiSFdsuEjo&list=PL3LQJkGQtzc4gsrFkm4MjWhTXhopsMgpv&index=7&t=0s"
-              class="social-btn__link" target="_blank">
-              <img src="/img/hero/youtube.png" alt="" class="social-btn__img">
-            </a>
-          </div>
-        </aside>
-      </div>
-      <!-- /.hero -->
-      <button onclick="goToTop()" id="goToTop" title="Go to top"><span>&#8593;</span></button>
-    </div>
-    <!-- /.container -->
+    <div class="header-bg"></div>
+    <nav class="header-nav">
+      <a href="#" class="header-nav__link">Головна</a>
+      <a href="#info" class="header-nav__link">Про нас</a>
+      <a href="#about" class="header-nav__link">Наші курси</a>
+      <a href="#register" class="header-nav__link">Реєстрація</a>
+      <a href="#ask" class="header-nav__link">Контакти</a>
+    </nav>
+    <!-- /.header-nav -->
+    <aside class="header-social">
+      <a href="#" class="header-social__pic">
+        <img src="./img/hero/telegram.png" alt="Telegram">
+      </a>
+      <a href="#" class="header-social__pic">
+        <img src="./img/hero/insta.png" alt="Instagram">
+      </a>
+      <a href="#" class="header-social__pic">
+        <img src="./img/hero/facebook.png" alt="Facebook">
+      </a>
+      <a href="#" class="header-social__pic">
+        <img src="./img/hero/youtube.png" alt="Youtube">
+      </a>
+    </aside>
+    <!-- /.header-social -->
+    <!-- /.hero -->
+    <button onclick="goToTop()" id="goToTop" title="Go to top">
+      <span>&#8593;</span>
+    </button>
+    <!-- button to top -->
   </header>
   <!-- /.header -->
 
@@ -130,10 +118,15 @@
             <h2 class="register-form__title">Реєстрація</h2>
             <span class="register-form__subtitle">Пройдіть реєстрацію і ми вам розкажемо<br>про наші переваги та умови
               навчання</span>
-            <form action="" class="form register-form__form">
-              <input type="text" placeholder="Ім'я" class="input form__input">
-              <input type="text" placeholder="Прізвище" class="input form__input">
-              <input type="text" placeholder="E-mail" class="input form__input">
+            <form method="POST" class="form register-form__form">
+              <!-- Hidden Required Fields -->
+              <input type="hidden" name="project_name" value="Landing-KHNEU">
+              <input type="hidden" name="admin_email" value="kuznets.event@gmail.com">
+              <input type="hidden" name="form_subject" value="РЕЄСТРАЦІЯ для отримання інформації">
+              <!-- END Hidden Required Fields -->
+              <input type="text" name="user_name" placeholder="Ім'я" class="input form__input" required>
+              <input type="text" name="user_surname" placeholder="Прізвище" class="input form__input" required>
+              <input type="text" name="user_email" placeholder="E-mail" class="input form__input" required>
               <input type="submit" class="button form__button" value="Зареєструватись"></input>
             </form>
           </div>
@@ -192,9 +185,9 @@
     <div class="container">
       <div class="footer-info">
         <span class="footer__rights">All rights reserved &copy;</span>
-        <div class="footer__sign">
-          <a href="https://instagram.com/a1skorohod" class="footer__link" target="_blank">
-            <img src="img/footer/insta.png" alt="" class="footer__img">Created by Alexandr Skorokhod
+        <div class="footer-sign">
+          <a href="https://instagram.com/a1skorohod" class="footer-sign__link" target="_blank">Created by Alexandr
+            Skorokhod
           </a>
         </div>
       </div>
@@ -202,7 +195,11 @@
     <!-- /.container -->
   </footer>
   <!-- /.footer -->
-  <script src="js/main.js"></script>
+
+  <script src="./js/jQuery-3.4.1.min.js"></script>
+  <script src="./js/toMail.js"></script>
+  <script src="./js/main.js"></script>
+  <!-- /scripts -->
 </body>
 
 </html>

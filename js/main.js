@@ -2,7 +2,7 @@ const anchors = document.querySelectorAll('a[href*="#"]');
 const goToTopButton = document.getElementById('goToTop')
 
 for (let anchor of anchors) {
-  anchor.addEventListener("click", function (event) {
+  anchor.addEventListener("click", event => {
     event.preventDefault();
     const blockID = anchor.getAttribute('href');
     document.querySelector('' + blockID).scrollIntoView({
@@ -16,7 +16,7 @@ window.onscroll = () => {
   scrollFunction()
 }
 
-function scrollFunction() {
+const scrollFunction = () => {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     goToTopButton.style.display = "block";
   } else {
@@ -24,7 +24,7 @@ function scrollFunction() {
   }
 }
 
-function goToTop() {
+const goToTop = () => {
   document.body.scrollIntoView({
     behavior: "smooth",
     block: "start"
