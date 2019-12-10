@@ -118,10 +118,15 @@
             <h2 class="register-form__title">Реєстрація</h2>
             <span class="register-form__subtitle">Пройдіть реєстрацію і ми вам розкажемо<br>про наші переваги та умови
               навчання</span>
-            <form action="" class="form register-form__form">
-              <input type="text" placeholder="Ім'я" class="input form__input">
-              <input type="text" placeholder="Прізвище" class="input form__input">
-              <input type="text" placeholder="E-mail" class="input form__input">
+            <form method="POST" class="form register-form__form">
+              <!-- Hidden Required Fields -->
+              <input type="hidden" name="project_name" value="Landing-KHNEU">
+              <input type="hidden" name="admin_email" value="kuznets.event@gmail.com">
+              <input type="hidden" name="form_subject" value="РЕЄСТРАЦІЯ для отримання інформації">
+              <!-- END Hidden Required Fields -->
+              <input type="text" name="user_name" placeholder="Ім'я" class="input form__input" required>
+              <input type="text" name="user_surname" placeholder="Прізвище" class="input form__input" required>
+              <input type="text" name="user_email" placeholder="E-mail" class="input form__input" required>
               <input type="submit" class="button form__button" value="Зареєструватись"></input>
             </form>
           </div>
@@ -190,7 +195,11 @@
     <!-- /.container -->
   </footer>
   <!-- /.footer -->
-  <script src="js/main.js"></script>
+
+  <script src="./js/jQuery-3.4.1.min.js"></script>
+  <script src="./js/toMail.js"></script>
+  <script src="./js/main.js"></script>
+  <!-- /scripts -->
 </body>
 
 </html>
