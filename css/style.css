@@ -948,10 +948,11 @@ body {
   .container {
     max-width: 750px;
   }
-  .info__logo {
-    display: none;
+  .info__logo img {
+    max-height: 430px;
   }
   .info__text {
+    width: inherit;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1021,7 +1022,11 @@ body {
   .info__subtitle {
     font-size: 34px;
   }
+  .info__logo {
+    display: none;
+  }
   .info__text {
+    width: 100%;
     margin-top: 30px;
   }
   .info__text-text {
