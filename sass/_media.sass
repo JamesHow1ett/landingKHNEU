@@ -37,14 +37,20 @@
       justify-content: center
     &__img
       display: none
+@media (max-width: 1310px)
+  .header
+    max-height: 100vh
+  .section:first-child
+    margin-top: 56px
 @media (max-width: 940px)
   .header
+    max-height: 80vh
     display: grid
-    grid-template-columns: 6fr 1fr
+    grid-template-columns: auto
     &-nav
       display: grid
-      grid-template-columns: auto auto auto
-      grid-template-rows: auto auto
+      grid-template-columns: auto auto auto auto auto
+      grid-template-rows: auto
       column-gap: 20px
       row-gap: 20px
       grid-column: 1/2
@@ -52,8 +58,9 @@
       &__link
         margin-right: 0
     &-social
-      grid-column: 2/3
-      grid-row: 2/2
+      display: none
+  .section:first-child
+    margin-top: 0
   .container
     max-width: 750px
   .info
@@ -83,8 +90,8 @@
     max-height: 80vh
     &-nav
       display: grid
-      grid-template-columns: auto auto
-      grid-template-rows: auto auto auto
+      grid-template-columns: auto auto auto
+      grid-template-rows: auto auto
       justify-items: stretch
       align-items: center
       column-gap: 50px
@@ -116,7 +123,15 @@
   .header
     max-height: 70vh
     &-nav
+      display: grid
+      grid-template-columns: auto auto
+      grid-template-rows: auto auto auto
+      justify-items: stretch
+      align-items: center
+      column-gap: 50px
+      grid-column: 1 / span 2
       margin: 20px 0
+      margin-left: -50px
   .container
     max-width: 100%
   .info
@@ -148,7 +163,7 @@
       align-items: center
       justify-items: center
       margin: 15px 0
-      margin-left: -90px
+      margin-left: -120px
   .section
     margin-bottom: 50px
   .container
