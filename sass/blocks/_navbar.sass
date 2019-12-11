@@ -1,31 +1,48 @@
 .header
-  background: #E5E5E5 url('../img/hero/bg-header.png') no-repeat center
-  background-size: 100%
-  padding: 500px 0
-  background-color: #ebedf1
-.navbar
-  display: flex
-  align-items: center
-  margin-top: -500px
-  min-height: 150px
-  background-color: #5A1Bff
-  border-radius: 0 0 0 50px
-.menu
-  margin-left: 200px
-  &__nav
-    display: flex
-    justify-content: space-between
-    margin-bottom: 20px
-  &__link
-    text-decoration: none
-    font-size: 30px
-    margin-right: 60px
-    color: #ffffff
-    &:hover
+  max-height: 80vh
+  display: grid
+  grid-template-columns: 1fr 6fr 1fr
+  grid-template-rows: 2fr 6fr
+  background: url('../img/hero/bg-header.png')
+  background-repeat: no-repeat
+  background-position: center top
+  background-size: cover
+  &-bg
+    grid-column: 1/4
+    grid-row: 1/2
+    background: $primary
+    border-radius: 0 0 0 180px
+  &-nav
+    grid-column: 2/3
+    grid-row: 1/2
+    justify-self: flex-end
+    align-self: center
+    margin: 60px 0
+    &__link
+      margin-right: 20px
+      font-size: 2.2em
+      color: $secondary
+      text-decoration: none
+    &__link:hover
       text-decoration: underline
-  &__link:first-child
-    margin-left: 100px
-    +bold
+    &__link:first-child
+      +bold
+    &__link:last-child
+      margin-right: 0
+  &-social
+    display: grid
+    grid-column: 3/3
+    grid-row: 2/2
+    justify-items: center
+    align-items: center
+    background: url('../img/hero/right-form.png')
+    background-repeat: no-repeat
+    background-size: cover
+    &__pic
+      margin-left: 72px
+      padding: 10px 5px
+    &__pic:last-child
+      margin-bottom: 20px
 #goToTop
   display: none
   position: fixed

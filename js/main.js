@@ -1,8 +1,8 @@
 const anchors = document.querySelectorAll('a[href*="#"]');
-const goToTopButton = document.getElementById('goToTop');
+const goToTopButton = document.getElementById('goToTop')
 
 for (let anchor of anchors) {
-  anchor.addEventListener("click", (event) => {
+  anchor.addEventListener("click", event => {
     event.preventDefault();
     const blockID = anchor.getAttribute('href');
     document.querySelector('' + blockID).scrollIntoView({
@@ -13,7 +13,7 @@ for (let anchor of anchors) {
 }
 
 window.onscroll = () => {
-  scrollFunction();
+  scrollFunction()
 }
 
 const scrollFunction = () => {

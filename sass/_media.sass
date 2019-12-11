@@ -1,28 +1,28 @@
 @media (max-width:  1280px)
+  .header
+    &-bg
+      background: $primary
+    &-nav
+      display: grid
+      grid-template-columns: auto auto auto auto auto
+      grid-template-rows: auto
+      align-items: center
+      &__link
+        font-size: 1.5em
   .container
     max-width: 990px
-  .header
-    background-size: cover
-  .menu
-    margin-left: 0
-    &__link
-      font-size: 24px
-  .social-btn
-    &__block
-      margin: 5px
-    &__block:first-child
-      margin-top: 50px
   .info
     &__title
       text-align: center
     &__subtitle
       text-align: center
     &__logo
-      display: none
+      img
+        max-height: 560px
     &__text
       display: flex
       flex-direction: column
-      align-items: center
+      align-items: flex-end
       justify-content: space-between
       width: 100%
       margin-top: 55px
@@ -37,19 +37,43 @@
       justify-content: center
     &__img
       display: none
+@media (max-width: 1310px)
+  .header
+    max-height: 100vh
+  .section:first-child
+    margin-top: 56px
 @media (max-width: 940px)
+  .header
+    max-height: 80vh
+    display: grid
+    grid-template-columns: auto
+    &-bg
+      border-radius: 0 0 60px 70px
+    &-nav
+      display: grid
+      grid-template-columns: auto auto auto auto auto
+      grid-template-rows: auto
+      column-gap: 20px
+      row-gap: 20px
+      grid-column: 1/2
+      grid-row: 1/2
+      margin: 35px 0
+      margin-left: 80px
+      &__link
+        margin-right: 0
+    &-social
+      display: none
+  .section:first-child
+    margin-top: 0
   .container
     max-width: 750px
-  .menu
-    &__link
-      margin-right: 20px
-  .social-btn
-    &__block
-      margin: 5px
-    &__block:first-child
-      margin-top: 20px
   .info
+    &__logo
+      img
+        max-height: 430px
     &__text
+      width: inherit
+      align-items: center
       margin-top: 35px
   .about
     &-card
@@ -65,25 +89,34 @@
       align-items: center
       &__rights
         margin-bottom: 20px
-@media (max-width: 734px)
+@media (max-width: 780px)
   .header
-    background-size: cover
+    display: grid
+    grid-template-columns: auto
+    max-height: 80vh
+    &-nav
+      display: grid
+      grid-template-columns: auto auto auto
+      grid-template-rows: auto auto
+      justify-items: stretch
+      align-items: center
+      column-gap: 50px
+      grid-column: 1 / span 2
+      margin: 20px 0
+      margin-left: -120px
+    &-social
+      display: none
   .container
     max-width: 580px
-  .menu
-    &__nav
-      margin-bottom: 0
-    &__link:first-child
-      margin-left: 50px
-  .social-btn
-    &__block:first-child
-      margin-top: 0
   .info
     &__title
       font-size: 50px
     &__subtitle
       font-size: 34px
+    &__logo
+      display: none
     &__text
+      width: 100%
       margin-top: 30px
       &-text
         margin-bottom: 45px
@@ -97,22 +130,20 @@
     &__rights
       margin-bottom: 20px
 @media (max-width: 576px)
+  .header
+    max-height: 70vh
+    &-nav
+      display: grid
+      grid-template-columns: auto auto
+      grid-template-rows: auto auto auto
+      justify-items: stretch
+      align-items: center
+      column-gap: 50px
+      grid-column: 1 / span 2
+      margin: 20px 0
+      margin-left: -50px
   .container
     max-width: 100%
-  .menu
-    &__nav
-      margin-bottom: 0
-    &__link
-      font-size: 15px
-  .social-btn
-    display: none
-    &__block
-      max-width: 80px
-    &__block:last-child
-      margin-bottom: 0
-    &__img
-      height: 73px
-      max-width: 80px
   .info
     &__text
       font-size: 25px
@@ -133,15 +164,20 @@
     &__link
       font-size: 20px
 @media (max-width: 420px)
+  .header
+    max-height: 70vh
+    &-nav
+      display: grid
+      grid-template-columns: auto
+      grid-template-rows: auto auto auto auto auto
+      align-items: center
+      justify-items: center
+      margin: 15px 0
+      margin-left: -120px
   .section
     margin-bottom: 50px
   .container
     max-width: 100%
-  .navbar
-    max-width: 100%
-  .menu
-    &__link:first-child
-      margin-left: 5px
   .info
     margin-right: 5px
   .about
@@ -177,20 +213,10 @@
         &-text
           margin-top: 10px
 @media (max-width: 360px)
-  .navbar
-    display: flex
-    flex-direction: column
-    justify-content: center
-  .menu
-    &__nav
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
-    &__link
-      margin: 8px 0
-    &__link:first-child
-      margin-left: 0
+  .header
+    &-nav
+      margin: 10px 0
+      margin-left: -95px
   .ask
     &-contacts
       &__link
