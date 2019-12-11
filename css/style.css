@@ -433,7 +433,7 @@ body {
   -ms-grid-row-span: 1;
   grid-row: 1/2;
   background: #5A1Bff;
-  border-radius: 0 0 0 50px;
+  border-radius: 0 0 0 180px;
 }
 
 .header-nav {
@@ -919,6 +919,9 @@ body {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
   }
+  .header-bg {
+    border-radius: 0 0 60px 70px;
+  }
   .header-nav {
     display: -ms-grid;
     display: grid;
@@ -935,6 +938,8 @@ body {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
+    margin: 35px 0;
+    margin-left: 80px;
   }
   .header-nav__link {
     margin-right: 0;
@@ -1008,6 +1013,7 @@ body {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1 / span 2;
+    margin: 20px 0;
     margin-left: -120px;
   }
   .header-social {
@@ -1176,7 +1182,7 @@ body {
 @media (max-width: 360px) {
   .header-nav {
     margin: 10px 0;
-    margin-left: -70px;
+    margin-left: -95px;
   }
   .ask-contacts__link {
     font-size: 20px;
