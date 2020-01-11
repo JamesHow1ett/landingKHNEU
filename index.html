@@ -9,9 +9,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-
-  <header class="header" id="header">
+<body class="body">
+  <header class="header container main" id="header">
     <div class="header-bg"></div>
     <nav class="header-nav">
       <a href="#" class="header-nav__link">Головна</a>
@@ -21,22 +20,6 @@
       <a href="#ask" class="header-nav__link">Контакти</a>
     </nav>
     <!-- /.header-nav -->
-    <aside class="header-social">
-      <a href="#" class="header-social__pic">
-        <img src="./img/hero/telegram.png" alt="Telegram">
-      </a>
-      <a href="#" class="header-social__pic">
-        <img src="./img/hero/insta.png" alt="Instagram">
-      </a>
-      <a href="#" class="header-social__pic">
-        <img src="./img/hero/facebook.png" alt="Facebook">
-      </a>
-      <a href="#" class="header-social__pic">
-        <img src="./img/hero/youtube.png" alt="Youtube">
-      </a>
-    </aside>
-    <!-- /.header-social -->
-    <!-- /.hero -->
     <button onclick="goToTop()" id="goToTop" title="Go to top">
       <span>&#8593;</span>
     </button>
@@ -44,157 +27,143 @@
   </header>
   <!-- /.header -->
 
-  <main>
+  <main class="main">
     <section class="section" id="info">
-      <div class="container">
-        <div class="info">
-          <h1 class="info__title">Kuznets junior university</h1>
-          <!-- /.info__title -->
-          <span class="info__subtitle">Креативний простір для навчання новим навичкам</span>
-          <!-- /.info__subtitle -->
-          <div class="info__content">
-            <div class="info__logo">
-              <img src="./img/info/info-img.png" alt="">
-            </div>
-            <div class="info__text">
-              <p class="info__text-text">Наші курси допоможуть вам <br> перестрибнути на новий <br> рівень розвитку</p>
-              <p class="info__text-text">Ми використовуємо <br> найсучасніші методики <br> та новітні технології
-                навчання
-              </p>
-            </div>
-            <!-- /.info__text 1-->
+      <div class="info">
+        <h1 class="info__title">Kuznets junior university</h1>
+        <!-- /.info__title -->
+        <span class="info__subtitle">Креативний простір для навчання новим навичкам</span>
+        <!-- /.info__subtitle -->
+        <div class="info__content">
+          <div class="info__logo">
+            <img src="./img/info/info-img.png" alt="">
           </div>
-          <!-- /.info__content -->
+          <div class="info__text">
+            <p class="info__text-text">Наші курси допоможуть вам <br> перестрибнути на новий <br> рівень розвитку
+            </p>
+            <p class="info__text-text">Ми використовуємо <br> найсучасніші методики <br> та новітні технології
+              навчання
+            </p>
+          </div>
+          <!-- /.info__text 1-->
         </div>
-        <!-- /.info -->
+        <!-- /.info__content -->
       </div>
-      <!-- /.container -->
+      <!-- /.info -->
     </section>
     <!-- /.section -->
 
     <section class="section" id="about">
-      <div class="container">
-        <div class="about">
-          <div class="about-card about-card__first">
-            <img src="img/about/online.png" alt="ON-line курси" class="about-card__img">
-            <h2 class="about-card__title">ON-line курси</h2>
-            <!-- /.about-card__title -->
-          </div>
-          <!-- /.about-card -->
-          <div class="about-card about-card__dark">
-            <img src="img/about/leng.png" alt="Мовні курси" class="about-card__img">
-            <h2 class="about-card__title about-card__title-secondary">Мовні курси</h2>
-            <!-- /.about-card__title -->
-          </div>
-          <!-- /.about-card -->
-          <div class="about-card about-card__dark about-card__third">
-            <img src="img/about/3d.png" alt="Курси робототехніки" class="about-card__img">
-            <h2 class="about-card__title about-card__title-secondary">Курси робототехніки<br>
-              Моделювання<br>та друк на 3D
-              принтері</h2>
-            <!-- /.about-card__title -->
-          </div>
-          <!-- /.about-card -->
-          <div class="about-card about-card__last">
-            <img src="img/about/zno.png" alt="Підготовка до ЗНО/ДПА" class="about-card__img">
-            <h2 class="about-card__title">Підготовка<br>до ЗНО/ДПА</h2>
-            <!-- /.about-card__title -->
-          </div>
-          <!-- /.about-card -->
+      <div class="about">
+        <div class="about-card about-card__first">
+          <img src="./img/about/online.png" alt="ON-line курси" class="about-card__img">
+          <h2 class="about-card__title">ON-line курси</h2>
+          <!-- /.about-card__title -->
         </div>
-        <!-- /.about -->
+        <!-- /.about-card -->
+        <div class="about-card about-card__dark">
+          <img src="./img/about/leng.png" alt="Мовні курси" class="about-card__img">
+          <h2 class="about-card__title about-card__title-secondary">Мовні курси</h2>
+          <!-- /.about-card__title -->
+        </div>
+        <!-- /.about-card -->
+        <div class="about-card about-card__dark about-card__third">
+          <img src="./img/about/3d.png" alt="Курси робототехніки" class="about-card__img">
+          <h2 class="about-card__title about-card__title-secondary">Курси робототехніки<br>
+            Моделювання<br>та друк на 3D
+            принтері</h2>
+          <!-- /.about-card__title -->
+        </div>
+        <!-- /.about-card -->
+        <div class="about-card about-card__last">
+          <img src="./img/about/zno.png" alt="Підготовка до ЗНО/ДПА" class="about-card__img">
+          <h2 class="about-card__title">Підготовка<br>до ЗНО/ДПА</h2>
+          <!-- /.about-card__title -->
+        </div>
+        <!-- /.about-card -->
       </div>
-      <!-- /.container -->
+      <!-- /.about -->
     </section>
     <!-- /.section -->
 
     <section class="section" id="register">
-      <div class="container">
-        <div class="register__block register-block">
-          <div class="register-img">
-            <img src="img/register/register.png" alt="Реєстрація" class="register-img__img">
-          </div>
-          <div class="register-form">
-            <h2 class="register-form__title">Реєстрація</h2>
-            <span class="register-form__subtitle">Пройдіть реєстрацію і ми вам розкажемо<br>про наші переваги та умови
-              навчання</span>
-            <!-- form Start -->
-            <form class="form register-form__form">
-              <!-- Hidden Required Fields -->
-              <input type="hidden" name="project_name" value="Landing-KHNEU">
-              <input type="hidden" name="admin_email" value="kuznets.event@gmail.com">
-              <input type="hidden" name="form_subject" value="РЕЄСТРАЦІЯ для отримання інформації">
-              <!-- END Hidden Required Fields -->
-              <input name="user_name" type="text" placeholder="Ім'я" class="input form__input" required>
-              <input name="user_surname" type="text" placeholder="Прізвище" class="input form__input" required>
-              <input name="user_email" type="text" placeholder="E-mail" class="input form__input" required>
-              <input type="submit" class="button form__button" value="Зареєструватись"></input>
-            </form>
-            <!-- form END -->
-          </div>
-          <!-- /.register-block__form -->
+      <div class="register__block register-block">
+        <div class="register-img">
+          <img src="./img/register/register.png" alt="Реєстрація" class="register-img__img">
         </div>
+        <div class="register-form">
+          <h2 class="register-form__title">Реєстрація</h2>
+          <span class="register-form__subtitle">Пройдіть реєстрацію і ми вам розкажемо<br>про наші переваги та умови
+            навчання</span>
+          <!-- form Start -->
+          <form class="form register-form__form">
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="Landing-KHNEU">
+            <input type="hidden" name="admin_email" value="kuznets.event@gmail.com">
+            <input type="hidden" name="form_subject" value="РЕЄСТРАЦІЯ для отримання інформації">
+            <!-- END Hidden Required Fields -->
+            <input name="user_name" type="text" placeholder="Ім'я" class="input form__input" required>
+            <input name="user_surname" type="text" placeholder="Прізвище" class="input form__input" required>
+            <input name="user_email" type="text" placeholder="E-mail" class="input form__input" required>
+            <input type="submit" class="button form__button" value="Зареєструватись"></input>
+          </form>
+          <!-- form END -->
+        </div>
+        <!-- /.register-block__form -->
       </div>
-      <!-- /.container -->
     </section>
     <!-- /.section -->
 
     <section class="section" id="ask">
-      <div class="container">
-        <div class="ask-block">
-          <div class="ask-contacts">
-            <h2 class="ask-contacts__title">Виникли питання?</h2>
-            <div class="ask-contacts__contacts">
-              <h3 class="ask-contacts__subtitle">Наші контакти</h3>
-              <a href="#" class="ask-contacts__link" target="_blank">
-                <img src="img/ask/phone.png" alt="" class="ask-contacts__link-img"><span
-                  class="ask-contacts__link-text">063-274-35-21</span>
-              </a>
-              <a href="#" class="ask-contacts__link" target="_blank">
-                <img src="img/ask/telega.png" alt="" class="ask-contacts__link-img"><span
-                  class="ask-contacts__link-text">@KnNUE</span>
-              </a>
-              <a href="#" class="ask-contacts__link" target="_blank">
-                <img src="img/ask/email.png" alt="" class="ask-contacts__link-img"><span
-                  class="ask-contacts__link-text">kuznets.event@gmail.com</span>
-              </a>
-            </div>
-            <div class="ask-contacts__contacts">
-              <h3 class="ask-contacts__subtitle">Наша адреса</h3>
-              <a href="#" class="ask-contacts__link" target="_blank">
-                <img src="img/ask/map.png" alt="" class="ask-contacts__link-img"><span
-                  class="ask-contacts__link-text">м.
-                  Харків, ст.м. Наукова,<br>
-                  пр-т Науки, 9А</span>
-              </a>
-            </div>
+      <div class="ask-block">
+        <div class="ask-contacts">
+          <h2 class="ask-contacts__title">Виникли питання?</h2>
+          <div class="ask-contacts__contacts">
+            <h3 class="ask-contacts__subtitle">Наші контакти</h3>
+            <a href="#" class="ask-contacts__link" target="_blank">
+              <img src="./img/ask/phone.png" alt="" class="ask-contacts__link-img"><span
+                class="ask-contacts__link-text">063-274-35-21</span>
+            </a>
+            <a href="#" class="ask-contacts__link" target="_blank">
+              <img src="./img/ask/telega.png" alt="" class="ask-contacts__link-img"><span
+                class="ask-contacts__link-text">@KnNUE</span>
+            </a>
+            <a href="#" class="ask-contacts__link" target="_blank">
+              <img src="./img/ask/email.png" alt="" class="ask-contacts__link-img"><span
+                class="ask-contacts__link-text">kuznets.event@gmail.com</span>
+            </a>
           </div>
-          <!-- /.ask__contacts -->
-          <div class="ask__img">
-            <img src="img/ask/ask-bg.png" alt="Виникли питання" class="ask__img-img">
+          <div class="ask-contacts__contacts">
+            <h3 class="ask-contacts__subtitle">Наша адреса</h3>
+            <a href="#" class="ask-contacts__link" target="_blank">
+              <img src="./img/ask/map.png" alt="" class="ask-contacts__link-img"><span
+                class="ask-contacts__link-text">м.
+                Харків, ст.м. Наукова,<br>
+                пр-т Науки, 9А</span>
+            </a>
           </div>
-          <!-- /.ask__img -->
         </div>
-        <!-- /.ask-block -->
+        <!-- /.ask__contacts -->
+        <div class="ask__img">
+          <img src="./img/ask/ask-bg.png" alt="Виникли питання" class="ask__img-img">
+        </div>
+        <!-- /.ask__img -->
       </div>
-      <!-- /.container -->
+      <!-- /.ask-block -->
     </section>
     <!-- /.section -->
   </main>
   <!-- /main -->
 
   <footer class="footer">
-    <div class="container">
-      <div class="footer-info">
-        <span class="footer__rights">All rights reserved &copy;</span>
-        <div class="footer-sign">
-          <a href="https://github.com/JamesHow1ett" class="footer-sign__link" target="_blank">Created by Alexandr
-            Skorokhod
-          </a>
-        </div>
+    <div class="footer-info">
+      <span class="footer__rights">All rights reserved &copy;</span>
+      <div class="footer-sign">
+        <a href="https://github.com/JamesHow1ett" class="footer-sign__link" target="_blank">Created by Alexandr
+          Skorokhod
+        </a>
       </div>
     </div>
-    <!-- /.container -->
   </footer>
   <!-- /.footer -->
   <!-- script's here -->
