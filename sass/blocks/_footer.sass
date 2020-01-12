@@ -3,11 +3,32 @@
   grid-column: 1/4
   grid-row: 6/6
   background-color: $primary
+  z-index: 2
   &-info
     display: flex
     justify-content: space-between
     align-items: center
     padding: 50px 200px
+  &-links
+    display: grid
+    grid-template-columns: repeat(4, auto)
+    grid-template-rows: repeat(2, auto)
+    column-gap: 20px
+    row-gap: 30px
+    &-text
+      display: grid
+      grid-column: 1/5
+    &-caption
+      font-size: 30px
+      color: $secondary
+      +bold
+      text-align: center
+  &__links
+    justify-self: center
+    align-self: center
+  &-block
+    display: grid
+    row-gap: 30px
   &__rights
     font-size: 30px
     color: $secondary
