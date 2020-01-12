@@ -849,6 +849,12 @@ body {
   text-decoration: underline;
 }
 
+@media (max-width: 1310px) {
+  .header {
+    max-height: 80vh;
+  }
+}
+
 @media (max-width: 1280px) {
   .header-bg {
     background: #5A1Bff;
@@ -866,6 +872,10 @@ body {
   }
   .header-nav__link {
     font-size: 1.5em;
+  }
+  .section {
+    margin-top: -5px;
+    padding: 20px 0;
   }
   .container {
     max-width: 990px;
@@ -912,15 +922,6 @@ body {
   }
   .ask__img {
     display: none;
-  }
-}
-
-@media (max-width: 1310px) {
-  .header {
-    max-height: 100vh;
-  }
-  .section:first-child {
-    margin-top: 56px;
   }
 }
 
