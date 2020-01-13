@@ -46,3 +46,12 @@ const addStickyClass = () => {
     iconBar.style.display = "none";
   }
 }
+
+/* if (window.matchMedia("(max-width: 780px)").matches) {
+  let footerParent = document.querySelectorAll("footer > div.footer-info > div.footer-links > div.footer__links > a > i");
+  //console.log(footerParent);
+  for (let i = 0; i < footerParent.length; i++) {
+    footerParent[i].classList.remove("fa-5x");
+    footerParent[i].classList.add("fa-3x");
+  }
+} */

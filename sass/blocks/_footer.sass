@@ -5,15 +5,14 @@
   background-color: $primary
   z-index: 2
   &-info
-    display: flex
-    justify-content: space-between
-    align-items: center
+    display: grid
+    grid-template-columns: repeat(2, auto)
     padding: 50px 200px
   &-links
     display: grid
     grid-template-columns: repeat(4, auto)
     grid-template-rows: repeat(2, auto)
-    column-gap: 20px
+    justify-items: center
     row-gap: 30px
     &-text
       display: grid
@@ -30,6 +29,7 @@
       color: $secondary
   &-block
     display: grid
+    justify-items: center
     row-gap: 30px
   &__rights
     font-size: 30px
