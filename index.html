@@ -13,15 +13,15 @@
 <body class="body">
   <header class="header main" id="header">
     <div class="header-bg"></div>
-    <nav class="header-nav">
+    <nav class="header-nav" id="nav-bar">
       <a href="#header" class="header-nav__link">Головна</a>
       <a href="#info" class="header-nav__link">Про нас</a>
       <a href="#about" class="header-nav__link">Наші курси</a>
       <a href="#register" class="header-nav__link">Реєстрація</a>
       <a href="#ask" class="header-nav__link">Контакти</a>
     </nav>
-    <div class="icon-bar">
-      <a class="active" href="#header"><i class="fas fa-home"></i></a>
+    <div class="icon-bar" id="icon-bar">
+      <a href="#header"><i class="fas fa-home"></i></a>
       <a href="#info"><i class="fas fa-user"></i></a>
       <a href="#about"><i class="fas fa-clipboard-list"></i></a>
       <a href="#register"><i class="fas fa-lock"></i></a>
@@ -128,22 +128,22 @@
           <h2 class="ask-contacts__title">Виникли питання?</h2>
           <div class="ask-contacts__contacts">
             <h3 class="ask-contacts__subtitle">Наші контакти</h3>
-            <a href="#" class="ask-contacts__link" target="_blank">
+            <a href="tel:+380632743521" class="ask-contacts__link" target="_blank">
               <img src="./img/ask/phone.png" alt="" class="ask-contacts__link-img"><span
                 class="ask-contacts__link-text">063-274-35-21</span>
             </a>
-            <a href="#" class="ask-contacts__link" target="_blank">
+            <a href="https://t.me/kuznetsuniversity" class="ask-contacts__link" target="_blank">
               <img src="./img/ask/telega.png" alt="" class="ask-contacts__link-img"><span
-                class="ask-contacts__link-text">@KnNUE</span>
+                class="ask-contacts__link-text">@kuznetsuniversity</span>
             </a>
-            <a href="#" class="ask-contacts__link" target="_blank">
+            <a href="mailto:kuznets.event@gmail.com" class="ask-contacts__link" target="_blank">
               <img src="./img/ask/email.png" alt="" class="ask-contacts__link-img"><span
                 class="ask-contacts__link-text">kuznets.event@gmail.com</span>
             </a>
           </div>
           <div class="ask-contacts__contacts">
             <h3 class="ask-contacts__subtitle">Наша адреса</h3>
-            <a href="#" class="ask-contacts__link" target="_blank">
+            <a href="https://goo.gl/maps/SC7Xheq87pMKdFxg6" class="ask-contacts__link" target="_blank">
               <img src="./img/ask/map.png" alt="" class="ask-contacts__link-img"><span
                 class="ask-contacts__link-text">м.
                 Харків, ст.м. Наукова,<br>
@@ -170,16 +170,23 @@
           <span class="footer-links-caption">Ми в соціальних мережах</span>
         </div>
         <div class="footer__links">
-          <img src="./img/footer/social/telegram.png" alt="Мы в телеграм">
+          <a href="https://t.me/kuznetsuniversity" target="_blank"><i class="fab fa-telegram fa-5x"></i></a>
+          <!-- <img src="./img/footer/social/telegram.png" alt="Мы в телеграм"> -->
         </div>
         <div class="footer__links">
-          <img src="./img/footer/social/insta.png" alt="Мы в инстаграм">
+          <a href="https://www.instagram.com/Kuznets.university/" target="_blank"><i
+              class="fab fa-instagram fa-5x"></i></a>
+          <!-- <img src="./img/footer/social/insta.png" alt="Мы в инстаграм"> -->
         </div>
         <div class="footer__links">
-          <img src="./img/footer/social/facebook.png" alt="МЫ в фасебук">
+          <a href="https://www.facebook.com/Kuznetsuniversity-105881734282909/" target="_blank"><i
+              class="fab fa-facebook fa-5x"></i></a>
+          <!-- <img src="./img/footer/social/facebook.png" alt="МЫ в фасебук"> -->
         </div>
         <div class="footer__links">
-          <img src="./img/footer/social/youtube.png" alt="Мы в ютуб">
+          <a href="https://www.youtube.com/channel/UCBd4cmZehgcG9mPSOGQvGXQ" target="_blank"><i
+              class="fab fa-youtube fa-5x"></i></a>
+          <!-- <img src="./img/footer/social/youtube.png" alt="Мы в ютуб"> -->
         </div>
       </div>
       <!-- /.footer-links -->
