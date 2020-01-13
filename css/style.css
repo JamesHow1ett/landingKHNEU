@@ -530,8 +530,8 @@ body {
 }
 
 .icon-bar-sticky {
-  display: -ms-grid;
-  display: grid;
+  display: -ms-grid !important;
+  display: grid !important;
   -ms-grid-columns: (auto)[5];
       grid-template-columns: repeat(5, auto);
   -ms-grid-column: 1;
