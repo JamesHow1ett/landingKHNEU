@@ -1054,7 +1054,7 @@ body {
     justify-items: center;
     -ms-grid-row-align: center;
         align-self: center;
-    width: inherit;
+    width: 100%;
     background-color: #5A1Bff;
     overflow: auto;
   }
