@@ -1,3 +1,6 @@
+@media (max-width: 1310px)
+  .header
+    max-height: 80vh  
 @media (max-width:  1280px)
   .header
     &-bg
@@ -9,6 +12,9 @@
       align-items: center
       &__link
         font-size: 1.5em
+  .section
+    margin-top: -5px
+    padding: 20px 0
   .container
     max-width: 990px
   .info
@@ -26,6 +32,7 @@
       justify-content: space-between
       width: 100%
       margin-top: 55px
+      padding-right: 10px
       font-size: 30px
   .register
     &-block
@@ -35,42 +42,41 @@
   .ask
     &-block
       justify-content: center
+      //padding: 20px 0
     &__img
       display: none
-@media (max-width: 1310px)
+  .footer
+    &-info
+      grid-template-columns: auto
+      grid-template-rows: repeat(2, auto)
+      row-gap: 30px
+@media (max-width: 1145px)
+  .body
+    grid-template-columns: 1fr 1024px 1fr
   .header
-    max-height: 100vh
-  .section:first-child
-    margin-top: 56px
+    width: inherit
 @media (max-width: 940px)
+  body 
+    background-image: none
   .header
     max-height: 80vh
     display: grid
     grid-template-columns: auto
-    &-bg
-      border-radius: 0 0 60px 70px
     &-nav
-      display: grid
-      grid-template-columns: auto auto auto auto auto
-      grid-template-rows: auto
-      column-gap: 20px
-      row-gap: 20px
-      grid-column: 1/2
-      grid-row: 1/2
-      margin: 35px 0
-      margin-left: 80px
-      &__link
-        margin-right: 0
-    &-social
       display: none
+  .icon-bar
+    display: grid !important
+    grid-template-columns: repeat(5, auto)
+    grid-column: 1/4
+    grid-row: 1/1
+    justify-items: center
+    align-self: center
+    width: 100%
+    background-color: $primary
+    overflow: auto
   .section:first-child
     margin-top: 0
-  .container
-    max-width: 750px
   .info
-    &__logo
-      img
-        max-height: 430px
     &__text
       width: inherit
       align-items: center
@@ -80,34 +86,19 @@
       &__title
         font-size: 40px
       &__img
-        display: none
-  .footer
-    &-info
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
-      &__rights
-        margin-bottom: 20px
+        display: none  
 @media (max-width: 780px)
+  .body
+    display: grid
+    grid-template-columns: auto
+  .main
+    display: grid
   .header
     display: grid
     grid-template-columns: auto
+    grid-column: 1/4
     max-height: 80vh
-    &-nav
-      display: grid
-      grid-template-columns: auto auto auto
-      grid-template-rows: auto auto
-      justify-items: stretch
-      align-items: center
-      column-gap: 50px
-      grid-column: 1 / span 2
-      margin: 20px 0
-      margin-left: -120px
-    &-social
-      display: none
-  .container
-    max-width: 580px
+    width: 100%    
   .info
     &__title
       font-size: 50px
@@ -125,25 +116,24 @@
       padding: 20px
       grid-template-columns: auto
   .footer
+    &-links
+      grid-template-columns: repeat(3, auto)
+      grid-template-rows: repeat(3, auto)
+    &-sign
+      &__link
+        font-size: 20px
     &__img
       display: none
     &__rights
-      margin-bottom: 20px
+      font-size: 20px
 @media (max-width: 576px)
+  .body
+    display: block
   .header
     max-height: 70vh
-    &-nav
-      display: grid
-      grid-template-columns: auto auto
-      grid-template-rows: auto auto auto
-      justify-items: stretch
-      align-items: center
-      column-gap: 50px
-      grid-column: 1 / span 2
-      margin: 20px 0
-      margin-left: -50px
-  .container
-    max-width: 100%
+  .icon-bar
+    a 
+      font-size: 30px 
   .info
     &__text
       font-size: 25px
@@ -163,21 +153,19 @@
   .footer
     &__link
       font-size: 20px
+@media (max-width: 480px)
+  .footer
+    &-info
+      padding: 50px 10px
+    &__rights
+      font-size: 15px
+    &-sing
+      font-size: 15px
 @media (max-width: 420px)
   .header
     max-height: 70vh
-    &-nav
-      display: grid
-      grid-template-columns: auto
-      grid-template-rows: auto auto auto auto auto
-      align-items: center
-      justify-items: center
-      margin: 15px 0
-      margin-left: -120px
   .section
     margin-bottom: 50px
-  .container
-    max-width: 100%
   .info
     margin-right: 5px
   .about
@@ -212,11 +200,7 @@
         margin-bottom: 15px
         &-text
           margin-top: 10px
-@media (max-width: 360px)
-  .header
-    &-nav
-      margin: 10px 0
-      margin-left: -95px
+@media (max-width: 360px)    
   .ask
     &-contacts
       &__link

@@ -1,5 +1,7 @@
 const anchors = document.querySelectorAll('a[href*="#"]');
-const goToTopButton = document.getElementById('goToTop')
+const goToTopButton = document.getElementById('goToTop');
+const navBar = document.getElementById('nav-bar');
+const iconBar = document.getElementById('icon-bar');
 
 for (let anchor of anchors) {
   anchor.addEventListener("click", event => {
@@ -13,7 +15,8 @@ for (let anchor of anchors) {
 }
 
 window.onscroll = () => {
-  scrollFunction()
+  addStickyClass();
+  scrollFunction();
 }
 
 const scrollFunction = () => {
@@ -34,3 +37,21 @@ const goToTop = () => {
     block: "start"
   });
 }
+
+const addStickyClass = () => {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    iconBar.classList.add("icon-bar-sticky");
+  } else {
+    iconBar.classList.remove("icon-bar-sticky");
+    iconBar.style.display = "none";
+  }
+}
+
+/* if (window.matchMedia("(max-width: 780px)").matches) {
+  let footerParent = document.querySelectorAll("footer > div.footer-info > div.footer-links > div.footer__links > a > i");
+  //console.log(footerParent);
+  for (let i = 0; i < footerParent.length; i++) {
+    footerParent[i].classList.remove("fa-5x");
+    footerParent[i].classList.add("fa-3x");
+  }
+} */

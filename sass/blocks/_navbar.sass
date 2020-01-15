@@ -1,8 +1,9 @@
 .header
-  max-height: 80vh
+  width: 1140px
+  max-height: 85vh
   display: grid
-  grid-template-columns: 1fr 6fr 1fr
-  grid-template-rows: 2fr 6fr
+  grid-template-rows: 1fr 6fr
+  grid-column: 2/3
   background: url('../img/hero/bg-header.png')
   background-repeat: no-repeat
   background-position: center top
@@ -11,13 +12,12 @@
     grid-column: 1/4
     grid-row: 1/2
     background: $primary
-    border-radius: 0 0 0 180px
   &-nav
     grid-column: 2/3
     grid-row: 1/2
     justify-self: flex-end
     align-self: center
-    margin: 60px 0
+    margin: 40px auto
     &__link
       margin-right: 20px
       font-size: 2.2em
@@ -29,20 +29,6 @@
       +bold
     &__link:last-child
       margin-right: 0
-  &-social
-    display: grid
-    grid-column: 3/3
-    grid-row: 2/2
-    justify-items: center
-    align-items: center
-    background: url('../img/hero/right-form.png')
-    background-repeat: no-repeat
-    background-size: cover
-    &__pic
-      margin-left: 72px
-      padding: 10px 5px
-    &__pic:last-child
-      margin-bottom: 20px
 #goToTop
   display: none
   position: fixed
@@ -57,3 +43,30 @@
   background-color: $primary
   color: $secondary
   cursor: pointer
+.icon-bar
+  display: none  
+  a
+    text-align: center
+    padding: 12px 0
+    transition: all 0.3s ease
+    color: $secondary
+    font-size: 40px
+  a:hover 
+    color: #387eff
+.sticky
+  position: fixed
+  top: 0
+  z-index: 10
+.icon-bar-sticky
+  display: grid !important
+  grid-template-columns: repeat(5, auto)
+  grid-column: 1/4
+  grid-row: 1/1
+  justify-items: center
+  align-self: center
+  width: inherit
+  background-color: $primary
+  overflow: hidden
+  position: fixed
+  top: 0
+  z-index: 10

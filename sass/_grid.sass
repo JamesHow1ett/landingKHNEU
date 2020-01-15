@@ -1,11 +1,13 @@
 *, *:before, *:after
   box-sizing: border-box
 
-.container
-  max-width: 1470px
-  margin: auto
-  padding: 0 5px
 .section
-  margin-bottom: 80px
+  display: grid
+  grid-column: 2/3
+  max-width: 1140px
+  margin-bottom: 0
+  position: relative
+  background: #ebedf1
+  z-index: 1
   &:last-child
-    margin-bottom: 0
+    margin-bottom: -5px
