@@ -69,27 +69,37 @@
       <div class="about">
         <div class="about-card about-card__first">
           <img src="./img/about/online.png" alt="ON-line курси" class="about-card__img">
-          <h2 class="about-card__title">ON-line курси</h2>
+          <a href="https://online.hneu.edu.ua/">
+            <h2 class="about-card__title">ON-line курси</h2>
+          </a>
           <!-- /.about-card__title -->
         </div>
         <!-- /.about-card -->
         <div class="about-card about-card__dark">
           <img src="./img/about/leng.png" alt="Мовні курси" class="about-card__img">
-          <h2 class="about-card__title about-card__title-secondary">Мовні курси</h2>
+          <a
+            href="https://docs.google.com/forms/d/1E0dxJgdGLIkMb6GANqCHI_HMMTH1iDu_nO_fNkPUExk/viewform?ts=5dcdd5f1&edit_requested=true">
+            <h2 class="about-card__title about-card__title-secondary">Мовні курси</h2>
+          </a>
           <!-- /.about-card__title -->
         </div>
         <!-- /.about-card -->
         <div class="about-card about-card__dark about-card__third">
           <img src="./img/about/3d.png" alt="Курси робототехніки" class="about-card__img">
-          <h2 class="about-card__title about-card__title-secondary">Курси робототехніки<br>
-            Моделювання<br>та друк на 3D
-            принтері</h2>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScHMsJxJEp7mTqbay10gtTVnFS2EKQ7bcLG9HM_Pyvk3yiApw/viewform">
+            <h2 class="about-card__title about-card__title-secondary">Курси робототехніки<br>
+
+              Моделювання<br>та друк на 3D
+              принтері</h2>
+          </a>
           <!-- /.about-card__title -->
         </div>
         <!-- /.about-card -->
         <div class="about-card about-card__last">
           <img src="./img/about/zno.png" alt="Підготовка до ЗНО/ДПА" class="about-card__img">
-          <h2 class="about-card__title">Підготовка<br>до ЗНО/ДПА</h2>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScuDl9k0k8HEAsrJLCH0PloVrfqopcmG5G-SDh37p_QsBSPig/viewform">
+            <h2 class="about-card__title">Підготовка<br>до ЗНО/ДПА</h2>
+          </a>
           <!-- /.about-card__title -->
         </div>
         <!-- /.about-card -->
@@ -111,11 +121,13 @@
           <form class="form register-form__form">
             <!-- Hidden Required Fields -->
             <input type="hidden" name="project_name" value="Landing-KHNEU">
-            <input type="hidden" name="admin_email" value="kuznets.event@gmail.com">
+            <input type="hidden" name="admin_email" value="mopis101@gmail.com">
             <input type="hidden" name="form_subject" value="РЕЄСТРАЦІЯ для отримання інформації">
             <!-- END Hidden Required Fields -->
             <input name="user_name" type="text" placeholder="Ім'я" class="input form__input" required>
             <input name="user_surname" type="text" placeholder="Прізвище" class="input form__input" required>
+            <input id="phone-mask" name="user_phone" type="tel" placeholder="Ваш телефон" class="input form__input"
+              required>
             <input name="user_email" type="text" placeholder="E-mail" class="input form__input" required>
             <input type="submit" class="button form__button" value="Зареєструватись"></input>
           </form>
@@ -147,11 +159,11 @@
           </div>
           <div class="ask-contacts__contacts">
             <h3 class="ask-contacts__subtitle">Наша адреса</h3>
-            <a href="https://goo.gl/maps/SC7Xheq87pMKdFxg6" class="ask-contacts__link" target="_blank">
+            <a href="https://goo.gl/maps/q4XBB7fKnnt7wPQL7" class="ask-contacts__link" target="_blank">
               <img src="./img/ask/map.png" alt="" class="ask-contacts__link-img"><span
                 class="ask-contacts__link-text">м.
                 Харків, ст.м. Наукова,<br>
-                пр-т Науки, 9А</span>
+                Інженерний провулок, 1-А</span>
             </a>
           </div>
         </div>
@@ -209,6 +221,7 @@
   <!-- script's here -->
   <script src="./js/jQuery-3.4.1.min.js"></script>
   <script src="./js/toMail.js"></script>
+  <script src="https://unpkg.com/imask"></script>
   <script src="./js/main.js"></script>
   <!-- /scripts -->
 </body>
