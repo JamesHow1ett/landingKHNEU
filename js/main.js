@@ -61,6 +61,7 @@ const aboutCardLikeLink = () => {
     }
     aboutCard[i].onmouseover = () => {
       aboutCard[i].style.cursor = 'pointer';
+      aboutCard[i].style.transition = 'all 1s ease';
       aboutCard[i].style.background = 'rgba(0, 120, 201, 0.7)';
     }
   }
