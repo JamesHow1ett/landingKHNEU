@@ -54,7 +54,8 @@ const phoneMask = IMask(
   });
 
 
-const aboutCardLikeLink = () => {
+const hoverCards = () => {
+
   for (let i = 0; i < aboutCard.length; i++) {
     aboutCard[i].onmouseout = () => {
       aboutCard[i].style.background = '';
@@ -67,7 +68,7 @@ const aboutCardLikeLink = () => {
   }
 }
 
-document.getElementById('online').addEventListener('click', () => {
+/* document.getElementById('online').addEventListener('click', () => {
   location.href = 'https://online.hneu.edu.ua/'
 }, false);
 document.getElementById('language').addEventListener('click', () => {
@@ -78,6 +79,34 @@ document.getElementById('robot').addEventListener('click', () => {
 }, false);
 document.getElementById('zno').addEventListener('click', () => {
   location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScuDl9k0k8HEAsrJLCH0PloVrfqopcmG5G-SDh37p_QsBSPig/viewform'
-}, false);
+}, false); */
 
-aboutCardLikeLink();
+
+
+
+const createLinkCard = nodeList => {
+  //получаем nodeList с нашими div и переводим в Array
+  const divArray = Array.prototype.slice.call(nodeList);
+
+  //для каждого div с помошью цикла вешаем EventListener в котором получаем dataset.category
+  for (const index of divArray) {
+    index.addEventListener('click', event => {
+      const target = event.target;
+      const key = target.dataset.category;
+      if (key === 'online') {
+        location.href = 'https://online.hneu.edu.ua/'
+      } else if (key === 'language') {
+        location.href = 'https://docs.google.com/forms/d/1E0dxJgdGLIkMb6GANqCHI_HMMTH1iDu_nO_fNkPUExk/viewform?ts=5dcdd5f1&edit_requested=true'
+      } else if (key === 'robot') {
+        location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScHMsJxJEp7mTqbay10gtTVnFS2EKQ7bcLG9HM_Pyvk3yiApw/viewform'
+      } else if (key === 'zno') {
+        location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScuDl9k0k8HEAsrJLCH0PloVrfqopcmG5G-SDh37p_QsBSPig/viewform'
+      }
+    });
+  }
+
+
+}
+
+hoverCards();
+createLinkCard(aboutCard);
