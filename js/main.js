@@ -15,11 +15,6 @@ for (let anchor of anchors) {
   });
 }
 
-window.onscroll = () => {
-  addStickyClass();
-  scrollFunction();
-}
-
 const scrollFunction = () => {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     goToTopButton.style.display = "block";
@@ -53,9 +48,7 @@ const phoneMask = IMask(
     mask: '+{38}(000)000-00-00'
   });
 
-
 const hoverCards = () => {
-
   for (let i = 0; i < aboutCard.length; i++) {
     aboutCard[i].onmouseout = () => {
       aboutCard[i].style.background = '';
@@ -86,10 +79,10 @@ document.getElementById('zno').addEventListener('click', () => {
 
 const createLinkCard = nodeList => {
   //получаем nodeList с нашими div и переводим в Array
-  const divArray = Array.prototype.slice.call(nodeList);
+  const divsToArray = Array.prototype.slice.call(nodeList);
 
   //для каждого div с помошью цикла вешаем EventListener в котором получаем dataset.category
-  for (const index of divArray) {
+  for (const index of divsToArray) {
     index.addEventListener('click', event => {
       const target = event.target;
       const key = target.dataset.category;
@@ -108,5 +101,10 @@ const createLinkCard = nodeList => {
 
 }
 
+
+window.onscroll = () => {
+  addStickyClass();
+  scrollFunction();
+}
 hoverCards();
 createLinkCard(aboutCard);
