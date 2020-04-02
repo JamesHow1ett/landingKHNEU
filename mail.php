@@ -1,52 +1,25 @@
 <?php
+	$userName = $_POST['user_name'];
+	$userSurname = $_POST['user_surname'];
+	$userPhone = $_POST['user_phone'];
+	$userEmail = $_POST['user_email'];
 
-$method = $_SERVER['REQUEST_METHOD'];
 
-//Script Foreach
-$c = true;
-if ( $method === 'POST' ) {
+	$email_from = 'yourname@yourwebsite.com';
 
-	$project_name = trim($_POST["project_name"]);
-	$admin_email  = trim($_POST["admin_email"]);
-	$form_subject = trim($_POST["form_subject"]);
+	$email_subject = "Registration information from form";
 
-	foreach ( $_POST as $key => $value ) {
-		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
-			$message .= "
-			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
-				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
-				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-			</tr>
-			";
-		}
-	}
-} else if ( $method === 'GET' ) {
+	$email_body = "You have received a new message from the user: $userName.\n".
+	    "His surname: $userSurname". 
+	    "\nHis phone: $userPhone".
+	    "\nHis email: $userEmail\n".
 
-	$project_name = trim($_GET["project_name"]);
-	$admin_email  = trim($_GET["admin_email"]);
-	$form_subject = trim($_GET["form_subject"]);
+	$to = "yourname@yourwebsite.com";
 
-	foreach ( $_GET as $key => $value ) {
-		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
-			$message .= "
-			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
-				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
-				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-			</tr>
-			";
-		}
-	}
-}
+  	$headers = "From: $email_from \r\n";
 
-$message = "<table style='width: 100%;'>$message</table>";
+  	$headers .= "Reply-To: $userEmail \r\n";
 
-function adopt($text) {
-	return '=?UTF-8?B?'.Base64_encode($text).'?=';
-}
+  	mail($to,$email_subject,$email_body,$headers);
 
-$headers = "MIME-Version: 1.0" . PHP_EOL .
-"Content-Type: text/html; charset=utf-8" . PHP_EOL .
-'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
-'Reply-To: '.$admin_email.'' . PHP_EOL;
-
-mail($admin_email, adopt($form_subject), $message, $headers );
+?>

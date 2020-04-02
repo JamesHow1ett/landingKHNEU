@@ -61,44 +61,28 @@ const hoverCards = () => {
   }
 }
 
-/* document.getElementById('online').addEventListener('click', () => {
-  location.href = 'https://online.hneu.edu.ua/'
-}, false);
-document.getElementById('language').addEventListener('click', () => {
-  location.href = 'https://docs.google.com/forms/d/1E0dxJgdGLIkMb6GANqCHI_HMMTH1iDu_nO_fNkPUExk/viewform?ts=5dcdd5f1&edit_requested=true'
-}, false);
-document.getElementById('robot').addEventListener('click', () => {
-  location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScHMsJxJEp7mTqbay10gtTVnFS2EKQ7bcLG9HM_Pyvk3yiApw/viewform'
-}, false);
-document.getElementById('zno').addEventListener('click', () => {
-  location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScuDl9k0k8HEAsrJLCH0PloVrfqopcmG5G-SDh37p_QsBSPig/viewform'
-}, false); */
-
-
-
-
 const createLinkCard = nodeList => {
-  //получаем nodeList с нашими div и переводим в Array
-  const divsToArray = Array.prototype.slice.call(nodeList);
-
-  //для каждого div с помошью цикла вешаем EventListener в котором получаем dataset.category
-  for (const index of divsToArray) {
+  nodeList.forEach((index) => {
     index.addEventListener('click', event => {
       const target = event.target;
       const key = target.dataset.category;
-      if (key === 'online') {
-        location.href = 'https://online.hneu.edu.ua/'
-      } else if (key === 'language') {
-        location.href = 'https://docs.google.com/forms/d/1E0dxJgdGLIkMb6GANqCHI_HMMTH1iDu_nO_fNkPUExk/viewform?ts=5dcdd5f1&edit_requested=true'
-      } else if (key === 'robot') {
-        location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScHMsJxJEp7mTqbay10gtTVnFS2EKQ7bcLG9HM_Pyvk3yiApw/viewform'
-      } else if (key === 'zno') {
-        location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScuDl9k0k8HEAsrJLCH0PloVrfqopcmG5G-SDh37p_QsBSPig/viewform'
+
+      switch (key) {
+        case 'online':
+          location.href = 'https://online.hneu.edu.ua/';
+          break;
+        case 'language':
+          location.href = 'https://docs.google.com/forms/d/1E0dxJgdGLIkMb6GANqCHI_HMMTH1iDu_nO_fNkPUExk/viewform?ts=5dcdd5f1&edit_requested=true';
+          break;
+        case 'robot':
+          location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScHMsJxJEp7mTqbay10gtTVnFS2EKQ7bcLG9HM_Pyvk3yiApw/viewform';
+          break;
+        case 'zno':
+          location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScuDl9k0k8HEAsrJLCH0PloVrfqopcmG5G-SDh37p_QsBSPig/viewform';
+          break;
       }
     });
-  }
-
-
+  });
 }
 
 
