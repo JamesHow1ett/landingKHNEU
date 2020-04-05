@@ -1,9 +1,13 @@
+//declare const's
 const anchors = document.querySelectorAll('a[href*="#"]');
 const goToTopButton = document.getElementById('goToTop');
 const navBar = document.getElementById('nav-bar');
 const iconBar = document.getElementById('icon-bar');
 const aboutCard = document.querySelectorAll('div.about-card');
+const socialButtons = document.querySelectorAll('footer.footer > div.footer-info > .footer-links > .footer__links > a');
 
+
+//scroll our page by nav link's
 for (let anchor of anchors) {
   anchor.addEventListener("click", event => {
     event.preventDefault();
@@ -23,6 +27,8 @@ const scrollFunction = () => {
   }
 };
 
+
+//goTop button
 const goToTop = () => {
   document.body.scrollIntoView({
     behavior: "smooth",
@@ -34,6 +40,8 @@ const goToTop = () => {
   });
 };
 
+
+//do our nav sticky
 const addStickyClass = () => {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     iconBar.classList.add("icon-bar-sticky");
@@ -43,11 +51,15 @@ const addStickyClass = () => {
   }
 };
 
+
+//phone mask for our registration form
 const phoneMask = IMask(
   document.getElementById('phone-mask'), {
     mask: '+{38}(000)000-00-00'
   });
 
+
+//hover effect for div in aboutSection
 const hoverCards = () => {
   for (let i = 0; i < aboutCard.length; i++) {
     aboutCard[i].onmouseout = () => {
@@ -63,6 +75,8 @@ const hoverCards = () => {
   }
 }
 
+
+//get dataset and create correct link
 const createLinkCard = nodeList => {
   nodeList.forEach((index) => {
     index.addEventListener('click', event => {
@@ -88,9 +102,15 @@ const createLinkCard = nodeList => {
 }
 
 
-window.onscroll = () => {
-  addStickyClass();
-  scrollFunction();
+
+//initiation function
+const init = () => {
+  window.onscroll = () => {
+    addStickyClass();
+    scrollFunction();
+  }
+  hoverCards();
+  createLinkCard(aboutCard);
 }
-hoverCards();
-createLinkCard(aboutCard);
+
+init();
