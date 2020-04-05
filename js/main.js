@@ -54,7 +54,11 @@ const hoverCards = () => {
       aboutCard[i].style.background = '';
     }
     aboutCard[i].onmouseover = () => {
-      aboutCard[i].style.cssText = 'cursor: pointer; transition: all 1s ease; background: rgba(0, 120, 201, 0.7);';
+      if (i === 1 || i === 2) {
+        aboutCard[i].style.cssText = 'cursor: pointer; transition: all 1s ease-out; background: rgba(171, 137, 218, 0.7);';
+      } else {
+        aboutCard[i].style.cssText = 'cursor: pointer; transition: all 1s ease; background: rgba(0, 120, 201, 0.7);';
+      }
     }
   }
 }
