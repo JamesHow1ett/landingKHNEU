@@ -1,10 +1,12 @@
 //declare const's
+const body = document.getElementById('body');
 const anchors = document.querySelectorAll('a[href*="#"]');
 const goToTopButton = document.getElementById('goToTop');
 const navBar = document.getElementById('nav-bar');
 const iconBar = document.getElementById('icon-bar');
 const aboutCard = document.querySelectorAll('div.about-card');
 const socialButtons = document.querySelectorAll('footer.footer > div.footer-info > .footer-links > .footer__links > a');
+const footerInfo = document.querySelector('.footer-info');
 
 
 //scroll our page by nav link's
@@ -102,6 +104,40 @@ const createLinkCard = nodeList => {
 }
 
 
+//
+const spaceMyName = () => {
+  const spans = document.querySelectorAll('.footer-sign__link > span');
+  spans.forEach((index) => {
+    if (index.id === '8' || index.id === '11' || index.id === '20') {
+      index.style.cssText = 'display: inline-block; width: 5px;';
+    }
+  });
+}
+
+
+//
+const underLine = (event) => {
+  const target = event.target;
+  const haveData = target.dataset;
+  const sign = target.dataset.sign;
+  const caption = document.querySelector('.footer-links-caption');
+  const signLink = document.querySelector('.footer-sign__link');
+
+  if (haveData) {
+    if (haveData.social) {
+      caption.style.cssText = 'text-decoration: underline;';
+    } else {
+      caption.style.textDecoration = 'none';
+    }
+
+    if (sign) {
+      signLink.style.cssText = 'text-decoration: underline; transition: all 0.3s linear; color: #0000ff;'
+    } else {
+      signLink.style.cssText = '';
+    }
+
+  }
+}
 
 //initiation function
 const init = () => {
@@ -111,6 +147,14 @@ const init = () => {
   }
   hoverCards();
   createLinkCard(aboutCard);
+  spaceMyName();
+
+  footerInfo.addEventListener('mousemove', () => {
+    underLine(event);
+  });
 }
 
-init();
+
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+});
