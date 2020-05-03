@@ -26,8 +26,16 @@
   margin-top: 60px
   border: 2px solid $primary
   &__input
+    border: 0
     background-color: $bg-primary
     border-bottom: 1px solid $primary
+    outline: none
+  &__input[type="text"]:focus
+    border: 1px solid $primary
+    border-radius: 10px
+  &__input[type="tel"]:focus
+    border: 1px solid $primary
+    border-radius: 10px
   &__button
     margin: 60px
     padding: 20px 55px
@@ -36,4 +44,7 @@
     font-size: 40px
     text-transform: lowercase
     &:hover
+      transition: all 0.5s ease
+      background-color: #006600
       cursor: pointer
+      border-radius: 25px
