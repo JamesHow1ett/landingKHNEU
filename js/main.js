@@ -1,3 +1,4 @@
+import {coursesMap} from './modules/courseMap.js';
 //declare const's
 const body = document.getElementById('body');
 const anchors = document.querySelectorAll('a[href*="#"]');
@@ -33,10 +34,6 @@ const scrollFunction = () => {
 //goTop button
 const goToTop = () => {
   document.body.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
-  document.documentElement.scrollIntoView({
     behavior: "smooth",
     block: "start"
   });
@@ -78,27 +75,14 @@ const hoverCards = () => {
 }
 
 
+
 //get dataset and create correct link
 const createLinkCard = nodeList => {
   nodeList.forEach((index) => {
     index.addEventListener('click', event => {
       const target = event.target;
       const key = target.dataset.category;
-
-      switch (key) {
-        case 'online':
-          location.href = 'https://online.hneu.edu.ua/';
-          break;
-        case 'language':
-          location.href = 'https://docs.google.com/forms/d/1E0dxJgdGLIkMb6GANqCHI_HMMTH1iDu_nO_fNkPUExk/viewform?ts=5dcdd5f1&edit_requested=true';
-          break;
-        case 'robot':
-          location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScHMsJxJEp7mTqbay10gtTVnFS2EKQ7bcLG9HM_Pyvk3yiApw/viewform';
-          break;
-        case 'zno':
-          location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScuDl9k0k8HEAsrJLCH0PloVrfqopcmG5G-SDh37p_QsBSPig/viewform';
-          break;
-      }
+      location.href = coursesMap.get(key);
     });
   });
 }
@@ -147,8 +131,8 @@ const init = () => {
   }
   hoverCards();
   createLinkCard(aboutCard);
-  spaceMyName();
-
+  //spaceMyName();
+  goToTopButton.addEventListener('click', goToTop);
   footerInfo.addEventListener('mousemove', () => {
     underLine(event);
   });
