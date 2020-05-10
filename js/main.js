@@ -1,4 +1,3 @@
-import {coursesMap} from './modules/courseMap.js';
 //declare const's
 const body = document.getElementById('body');
 const anchors = document.querySelectorAll('a[href*="#"]');
@@ -75,19 +74,6 @@ const hoverCards = () => {
 }
 
 
-
-//get dataset and create correct link
-const createLinkCard = nodeList => {
-  nodeList.forEach((index) => {
-    index.addEventListener('click', event => {
-      const target = event.target;
-      const key = target.dataset.category;
-      location.href = coursesMap.get(key);
-    });
-  });
-}
-
-
 //
 const spaceMyName = () => {
   const spans = document.querySelectorAll('.footer-sign__link > span');
@@ -123,6 +109,7 @@ const underLine = (event) => {
   }
 }
 
+import {createLinkCard} from './modules/courseLinkModule.js';
 //initiation function
 const init = () => {
   window.onscroll = () => {
