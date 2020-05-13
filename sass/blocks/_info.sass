@@ -16,24 +16,25 @@
     font-weight: 300
     font-size: 44px
     color: $primary
-  &__content
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    margin-bottom: 150px
-  &__logo
-    position: relative
-    margin-top: -50px
-    img
-      position: absolute
-      z-index: -1
-      max-height: 740px
-  &__text
-    margin-top: 105px
-    font-size: 50px
-    text-align: right
-    color: $primary
-    &-text
-      margin-bottom: 95px
-    &-text:last-child
-      margin-bottom: 0
+  &-block
+    &__content
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      margin-bottom: 150px
+    &__logo
+      position: relative
+      margin-top: -50px
+      img
+        position: absolute
+        z-index: -1
+        max-height: 740px
+    &__text
+      margin-top: 105px
+      font-size: 50px
+      text-align: right
+      color: $primary
+      &_text
+        margin-bottom: 95px
+      &_text:last-child
+        margin-bottom: 0
