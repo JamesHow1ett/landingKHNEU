@@ -1,7 +1,7 @@
-//declare const's
+//import const's
 import * as domElem from './data/consts.js';
-import {createLinkCard} from './modules/courseLinkModule.js';
 import {getFullYear} from './data/getDateLib.js';
+import {createLinkCard} from './modules/courseLinkModule.js';
 import {validateForm} from './modules/validate.js';
 
 //scroll our page by nav link's
