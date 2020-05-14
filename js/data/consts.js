@@ -7,3 +7,5 @@ export const aboutCard = document.querySelectorAll('div.about-card');
 export const socialButtons = document.querySelectorAll('footer.footer > div.footer-info > .footer-links > .footer__links > a');
 export const footerInfo = document.querySelector('.footer-info');
 export const regForm = document.getElementById('reg-form');
+
+// here i'm store const what will be using in project
