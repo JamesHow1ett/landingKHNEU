@@ -2,6 +2,7 @@
 import * as domElem from './data/consts.js';
 import {createLinkCard} from './modules/courseLinkModule.js';
 import {getFullYear} from './data/getDateLib.js';
+import {validateForm} from './modules/validate.js';
 
 //scroll our page by nav link's
 for (let anchor of domElem.anchors) {
@@ -123,6 +124,9 @@ const init = () => {
   domElem.goToTopButton.addEventListener('click', goToTop);
   domElem.footerInfo.addEventListener('mousemove', () => {
     underLine(event);
+  });
+  domElem.regForm.addEventListener('input', () => {
+    validateForm(event);
   });
 }
 

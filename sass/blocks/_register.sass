@@ -30,6 +30,15 @@
     background-color: $bg-primary
     border-bottom: 1px solid $primary
     outline: none
+  // &__input:invalid
+  //   border: 2px dashed red 
+  &__input
+    &_valid
+      border: 1px solid green!important
+      border-radius: 10px
+    &_invalid
+      border: 2px dashed red!important
+      border-radius: 10px
   &__input[type="text"]:focus
     border: 1px solid $primary
     border-radius: 10px

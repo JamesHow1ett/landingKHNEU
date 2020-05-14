@@ -118,17 +118,17 @@
           <span class="register-form__subtitle">Пройдіть реєстрацію і ми вам розкажемо<br>про наші переваги та умови
             навчання</span>
           <!-- form Start -->
-          <form action="./mail.php" class="form register-form__form">
+          <form id="reg-form" action="./mail.php" class="form register-form__form">
             <!-- Hidden Required Fields -->
             <input type="hidden" name="project_name" value="Landing-KHNEU">
             <input type="hidden" name="admin_email" value="mopis101@gmail.com">
             <input type="hidden" name="form_subject" value="РЕЄСТРАЦІЯ для отримання інформації">
             <!-- END Hidden Required Fields -->
-            <input name="user_name" type="text" placeholder="Ім'я" class="input form__input" required>
-            <input name="user_surname" type="text" placeholder="Прізвище" class="input form__input" required>
+            <input id="name" name="user_name" type="text" placeholder="Ім'я" class="input form__input" required>
+            <input id="surname" name="user_surname" type="text" placeholder="Прізвище" class="input form__input" required>
             <input id="phone-mask" name="user_phone" type="tel" placeholder="Телефон" class="input form__input"
               required>
-            <input name="user_email" type="text" placeholder="E-mail" class="input form__input" required>
+            <input id="email" name="user_email" type="text" placeholder="E-mail" class="input form__input" required pattern="^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$">
             <input type="submit" class="button form__button" value="Зареєструватись"></input>
           </form>
           <!-- form END -->
@@ -224,6 +224,7 @@
   <script src="https://unpkg.com/imask"></script>
   <script type="module" src="./js/main.js"></script>
   <script type="module" src="./js/modules/courseLinkModule.js"></script>
+  <!-- <script src="./js/modules/validate.js"></script> -->
   <!-- /scripts -->
 </body>
 
