@@ -3,7 +3,6 @@ const emailRegExp = new RegExp("^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z
 
 const isValid = (value, elem, type) => {
   const res = type.exec(value);
-  console.log(elem);
   if (res) {
     elem.classList.remove('form__input_invalid');
     elem.classList.add('form__input_valid');
