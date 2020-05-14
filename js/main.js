@@ -1,7 +1,7 @@
 //declare const's
-//import {body,anchors, goToTopButton, navBar, iconBar, aboutCard, socialButtons, footerInfo} from './data/consts.js';
 import * as domElem from './data/consts.js';
 import {createLinkCard} from './modules/courseLinkModule.js';
+import {getFullYear} from './data/getDateLib.js';
 
 //scroll our page by nav link's
 for (let anchor of domElem.anchors) {
@@ -103,6 +103,12 @@ const underLine = (event) => {
   }
 }
 
+const setDateFooter = (parentElem) => {
+  const span = document.createElement('span');
+  span.innerHTML = ` ${getFullYear()}`;
+  parentElem.append(span);
+}
+
 
 //initiation function
 const init = () => {
@@ -112,6 +118,7 @@ const init = () => {
   }
   hoverCards();
   createLinkCard(domElem.aboutCard);
+  setDateFooter(document.querySelector('.footer__rights'));
   //spaceMyName();
   domElem.goToTopButton.addEventListener('click', goToTop);
   domElem.footerInfo.addEventListener('mousemove', () => {
@@ -123,3 +130,5 @@ const init = () => {
 document.addEventListener('DOMContentLoaded', () => {
   init();
 });
+
+
