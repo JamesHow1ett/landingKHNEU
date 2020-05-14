@@ -22,18 +22,20 @@
       text-align: center
     &__subtitle
       text-align: center
-    &__logo
-      img
-        max-height: 560px
-    &__text
-      display: flex
-      flex-direction: column
-      align-items: flex-end
-      justify-content: space-between
-      width: 100%
-      margin-top: 55px
-      padding-right: 10px
-      font-size: 30px
+    &-block
+      &__logo
+        img
+          max-height: 560px
+      &__text
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        justify-content: space-between
+        width: 100%
+        margin-top: 55px
+        padding-right: 10px
+        &_text
+          font-size: 30px
   .register
     &-block
       justify-content: center
@@ -80,10 +82,11 @@
   .section:first-child
     margin-top: 0
   .info
-    &__text
-      width: inherit
-      align-items: center
-      margin-top: 35px
+    &-block
+      &__text
+        width: inherit
+        align-items: center
+        margin-top: 35px
   .about
     &-card
       &__title
@@ -107,18 +110,21 @@
       font-size: 50px
     &__subtitle
       font-size: 34px
-    &__logo
-      display: none
-    &__text
-      width: 100%
-      margin-top: 30px
-      &-text
-        margin-bottom: 45px
+    &-block
+      &__logo
+        display: none
+      &__text
+        width: 100%
+        margin-top: 30px
+        &_text
+          margin-bottom: 45px
   .about
     &-card
       padding: 20px
       grid-template-columns: auto
   .footer
+    &-info
+      padding: 50px 100px
     &-links
       grid-template-columns: repeat(3, auto)
       grid-template-rows: repeat(3, auto)
@@ -138,8 +144,10 @@
     a 
       font-size: 30px 
   .info
-    &__text
-      font-size: 25px
+    &-block
+      &__text
+        &_text
+          font-size: 25px
   .about
     &-card
       &__title

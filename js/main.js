@@ -1,16 +1,10 @@
 //declare const's
-const body = document.getElementById('body');
-const anchors = document.querySelectorAll('a[href*="#"]');
-const goToTopButton = document.getElementById('goToTop');
-const navBar = document.getElementById('nav-bar');
-const iconBar = document.getElementById('icon-bar');
-const aboutCard = document.querySelectorAll('div.about-card');
-const socialButtons = document.querySelectorAll('footer.footer > div.footer-info > .footer-links > .footer__links > a');
-const footerInfo = document.querySelector('.footer-info');
-
+//import {body,anchors, goToTopButton, navBar, iconBar, aboutCard, socialButtons, footerInfo} from './data/consts.js';
+import * as domElem from './data/consts.js';
+import {createLinkCard} from './modules/courseLinkModule.js';
 
 //scroll our page by nav link's
-for (let anchor of anchors) {
+for (let anchor of domElem.anchors) {
   anchor.addEventListener("click", event => {
     event.preventDefault();
     const blockID = anchor.getAttribute('href');
@@ -23,9 +17,9 @@ for (let anchor of anchors) {
 
 const scrollFunction = () => {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    goToTopButton.style.display = "block";
+    domElem.goToTopButton.style.display = "block";
   } else {
-    goToTopButton.style.display = "none";
+    domElem.goToTopButton.style.display = "none";
   }
 };
 
@@ -42,10 +36,10 @@ const goToTop = () => {
 //do our nav sticky
 const addStickyClass = () => {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    iconBar.classList.add("icon-bar-sticky");
+    domElem.iconBar.classList.add("icon-bar-sticky");
   } else {
-    iconBar.classList.remove("icon-bar-sticky");
-    iconBar.style.display = "none";
+    domElem.iconBar.classList.remove("icon-bar-sticky");
+    domElem.iconBar.style.display = "none";
   }
 };
 
@@ -59,15 +53,15 @@ const phoneMask = IMask(
 
 //hover effect for div in aboutSection
 const hoverCards = () => {
-  for (let i = 0; i < aboutCard.length; i++) {
-    aboutCard[i].onmouseout = () => {
-      aboutCard[i].style.background = '';
+  for (let i = 0; i < domElem.aboutCard.length; i++) {
+    domElem.aboutCard[i].onmouseout = () => {
+      domElem.aboutCard[i].style.background = '';
     }
-    aboutCard[i].onmouseover = () => {
+    domElem.aboutCard[i].onmouseover = () => {
       if (i === 1 || i === 2) {
-        aboutCard[i].style.cssText = 'cursor: pointer; transition: all 1s ease-out; background: rgba(171, 137, 218, 0.7);';
+        domElem.aboutCard[i].style.cssText = 'cursor: pointer; transition: all 1s ease-out; background: rgba(171, 137, 218, 0.7);';
       } else {
-        aboutCard[i].style.cssText = 'cursor: pointer; transition: all 1s ease; background: rgba(0, 120, 201, 0.7);';
+        domElem.aboutCard[i].style.cssText = 'cursor: pointer; transition: all 1s ease; background: rgba(0, 120, 201, 0.7);';
       }
     }
   }
@@ -109,7 +103,7 @@ const underLine = (event) => {
   }
 }
 
-import {createLinkCard} from './modules/courseLinkModule.js';
+
 //initiation function
 const init = () => {
   window.onscroll = () => {
@@ -117,10 +111,10 @@ const init = () => {
     scrollFunction();
   }
   hoverCards();
-  createLinkCard(aboutCard);
+  createLinkCard(domElem.aboutCard);
   //spaceMyName();
-  goToTopButton.addEventListener('click', goToTop);
-  footerInfo.addEventListener('mousemove', () => {
+  domElem.goToTopButton.addEventListener('click', goToTop);
+  domElem.footerInfo.addEventListener('mousemove', () => {
     underLine(event);
   });
 }
