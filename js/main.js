@@ -70,17 +70,6 @@ const hoverCards = () => {
 
 
 //
-const spaceMyName = () => {
-  const spans = document.querySelectorAll('.footer-sign__link > span');
-  spans.forEach((index) => {
-    if (index.id === '8' || index.id === '11' || index.id === '20') {
-      index.style.cssText = 'display: inline-block; width: 5px;';
-    }
-  });
-}
-
-
-//
 const underLine = (event) => {
   const target = event.target;
   const haveData = target.dataset;

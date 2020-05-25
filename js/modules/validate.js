@@ -2,8 +2,8 @@ const nameRegExp = new RegExp("^[a-zа-яА-ЯёЁЇїІіЄєҐґ-]+$");
 const emailRegExp = new RegExp("^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$");
 
 const isValid = (value, elem, type) => {
-  const res = type.exec(value);
-  if (res) {
+  const result = type.exec(value);
+  if (result) {
     elem.classList.remove('form__input_invalid');
     elem.classList.add('form__input_valid');
   } else {
