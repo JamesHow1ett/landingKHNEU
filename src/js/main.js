@@ -66,16 +66,16 @@ const hoverCards = () => {
   for (let i = 0; i < aboutCard.length; i++) {
     aboutCard[i].onmouseout = () => {
       aboutCard[i].style.background = '';
-    }
+    };
     aboutCard[i].onmouseover = () => {
       if (i === 1 || i === 2) {
         aboutCard[i].style.cssText = 'cursor: pointer; transition: all 1s ease-out; background: rgba(171, 137, 218, 0.7);';
       } else {
         aboutCard[i].style.cssText = 'cursor: pointer; transition: all 1s ease; background: rgba(0, 120, 201, 0.7);';
       }
-    }
+    };
   }
-}
+};
 
 
 //get dataset and create correct link
@@ -101,7 +101,7 @@ const createLinkCard = nodeList => {
       }
     });
   });
-}
+};
 
 
 //
@@ -112,7 +112,7 @@ const spaceMyName = () => {
       index.style.cssText = 'display: inline-block; width: 5px;';
     }
   });
-}
+};
 
 
 //
@@ -131,20 +131,20 @@ const underLine = (event) => {
     }
 
     if (sign) {
-      signLink.style.cssText = 'text-decoration: underline; transition: all 0.3s linear; color: #0000ff;'
+      signLink.style.cssText = 'text-decoration: underline; transition: all 0.3s linear; color: #0000ff;';
     } else {
       signLink.style.cssText = '';
     }
 
   }
-}
+};
 
 //initiation function
 const init = () => {
   window.onscroll = () => {
     addStickyClass();
     scrollFunction();
-  }
+  };
   hoverCards();
   createLinkCard(aboutCard);
   spaceMyName();
@@ -152,7 +152,7 @@ const init = () => {
   footerInfo.addEventListener('mousemove', () => {
     underLine(event);
   });
-}
+};
 
 
 document.addEventListener('DOMContentLoaded', () => {
