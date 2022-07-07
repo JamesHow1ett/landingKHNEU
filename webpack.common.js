@@ -20,7 +20,11 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
-      patterns: [{ from: Path.resolve(__dirname, './public'), to: 'public' }],
+      patterns: [{
+        from: Path.resolve(__dirname, './public'),
+        to: 'public',
+        noErrorOnMissing: true,
+      }],
     }),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, './src/index.html'),
@@ -44,7 +48,7 @@ module.exports = {
       },
       {
         test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        type: 'asset'
+        type: 'asset',
       },
     ],
   },
