@@ -3,7 +3,7 @@ import PhoneMask from './helpers/phoneMask';
 
 // DOM Elements
 const anchors = document.querySelectorAll('a[href*="#"]');
-const goToTopButton = document.getElementById('goToTop');
+const goToTopButton = document.getElementById('go-to-top');
 const iconBar = document.getElementById('icon-bar');
 const aboutCard = document.querySelectorAll('div.about-card');
 const footerInfo = document.querySelector('.footer-info');
