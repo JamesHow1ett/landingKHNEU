@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.section {
+  display: grid;
+  grid-column: 2/3;
+  max-width: 1140px;
+  margin-bottom: 0;
+  position: relative;
+  background: #ebedf1;
+  z-index: 1;
+
+  &:last-child {
+    margin-bottom: -5px;
+  }
+}

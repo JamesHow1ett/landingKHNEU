@@ -1,0 +1,37 @@
+body {
+  background: url('../assets/img/body/bg-blue.png');
+  background-color: $bg-primary;
+  z-index: -999;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1140px 1fr;
+}
+
+.main {
+  display: grid;
+  grid-column: 1/4;
+}
+
+.input {
+  height: 52px;
+  margin: 40px 65px;
+  padding: 0 5px;
+  border: none;
+  color: $primary;
+}
+
+::placeholder {
+  color: $primary;
+  font-size: 24px;
+}
+
+::selection {
+  background: $primary;
+  color: $secondary;
+}
+
+a {
+  text-decoration: none;
+}

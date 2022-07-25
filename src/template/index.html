@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Kuznets junior university</title>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <!-- <title></title> -->
   <meta name="description" content="Kuznets junior university – креативний простір для навчання новим навичкам">
   <meta name="keywords"
     content="освіта для дітей, навчання та розвиток дитини, ЗНО/ДПА, ЗНО, робототехніка,друк на 3D принтері, мовні курси, курси язика, курси англійської мови, курси німецької мови, курси іспанської мови, курси арабської мови, курси французької мови, курси польської мови, курси болгарської мови, підготовка до зовнішнього незалежного оцінювання, курси економіки для дітей, економіка для дітей, Kuznets junior university, Харків, ХНЕУ, образование для детей, обучение и развитие ребенка, ВНО / ДПА, ЗНО,робототехника, курсы робототехники, печать на 3D принтере, языковые курсы, курсы языка, курсы английского языка, курсы немецкого языка, курсы испанского языка, курсы арабского языка, курсы французского языка, курсы польского языка, курсы болгарского языка, подготовка к внешнему независимому оцениванию, курсы экономики для детей, экономика для детей, Kuznets university, Kuznets junior university, Харьков, ХНЭУ">
-  <link rel="shortcut icon" href="./img/favicon/favicon.png" type="image/png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="./assets/img/favicon/favicon.png" type="image/png">
+  <link rel="stylesheet" href="./css/style.css" type="text/html">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <script src="./js/jQuery-3.4.1.min.js"></script>
 </head>
 
 <body class="body" id="body">
@@ -33,7 +33,7 @@
       <a href="#ask"><i class="fas fa-envelope"></i></a>
     </div>
     <!-- /.header-nav -->
-    <button onclick="goToTop()" id="goToTop" title="Go to top">
+    <button id="go-to-top" title="Go to top">
       <span><i class="fas fa-arrow-up"></i></span>
     </button>
     <!-- button to top -->
@@ -49,7 +49,7 @@
         <!-- /.info__subtitle -->
         <div class="info__content">
           <div class="info__logo">
-            <img src="./img/info/info-img.png" alt="">
+            <img src="./assets/img/info/info-img.png" alt="">
           </div>
           <div class="info__text">
             <p class="info__text-text">Наші курси допоможуть вам <br> перестрибнути на новий <br> рівень розвитку
@@ -69,7 +69,7 @@
     <section class="section" id="about">
       <div class="about">
         <div class="about-card about-card__first" id="online" data-category="online">
-          <img src="./img/about/online.png" alt="ON-line курси" class="about-card__img">
+          <img src="./assets/img/about/online.png" alt="ON-line курси" class="about-card__img">
           <a href="https://online.hneu.edu.ua/">
             <h2 class="about-card__title">ON-line курси нового покоління</h2>
           </a>
@@ -77,16 +77,15 @@
         </div>
         <!-- /.about-card -->
         <div class="about-card about-card__dark" id="language" data-category="language">
-          <img src="./img/about/leng.png" alt="Мовні курси" class="about-card__img">
-          <a
-            href="https://docs.google.com/forms/d/1E0dxJgdGLIkMb6GANqCHI_HMMTH1iDu_nO_fNkPUExk/viewform?ts=5dcdd5f1&edit_requested=true">
+          <img src="./assets/img/about/leng.png" alt="Мовні курси" class="about-card__img">
+          <a href="">
             <h2 class="about-card__title about-card__title-secondary">Мовні курси</h2>
           </a>
           <!-- /.about-card__title -->
         </div>
         <!-- /.about-card -->
         <div class="about-card about-card__dark about-card__third" id="robot" data-category="robot">
-          <img src="./img/about/3d.png" alt="Курси робототехніки" class="about-card__img">
+          <img src="./assets/img/about/3d.png" alt="Курси робототехніки" class="about-card__img">
           <a href="https://docs.google.com/forms/d/e/1FAIpQLScHMsJxJEp7mTqbay10gtTVnFS2EKQ7bcLG9HM_Pyvk3yiApw/viewform">
             <h2 class="about-card__title about-card__title-secondary">Курси робототехніки<br>
               Моделювання<br>та друк на 3D
@@ -96,7 +95,7 @@
         </div>
         <!-- /.about-card -->
         <div class="about-card about-card__last" id="zno" data-category="zno">
-          <img src="./img/about/zno.png" alt="Підготовка до ЗНО/ДПА" class="about-card__img">
+          <img src="./assets/img/about/zno.png" alt="Підготовка до ЗНО/ДПА" class="about-card__img">
           <a href="https://docs.google.com/forms/d/e/1FAIpQLScuDl9k0k8HEAsrJLCH0PloVrfqopcmG5G-SDh37p_QsBSPig/viewform">
             <h2 class="about-card__title">Підготовка<br>до ЗНО/ДПА</h2>
           </a>
@@ -111,7 +110,7 @@
     <section class="section" id="register">
       <div class="register__block register-block">
         <div class="register-img">
-          <img src="./img/register/register.png" alt="Реєстрація" class="register-img__img">
+          <img src="./assets/img/register/register.png" alt="Реєстрація" class="register-img__img">
         </div>
         <div class="register-form">
           <h2 class="register-form__title">Реєстрація</h2>
@@ -145,22 +144,22 @@
           <div class="ask-contacts__contacts">
             <h3 class="ask-contacts__subtitle">Наші контакти</h3>
             <a href="tel:+380632743521" class="ask-contacts__link" target="_blank">
-              <img src="./img/ask/phone.png" alt="" class="ask-contacts__link-img"><span
+              <img src="./assets/img/ask/phone.png" alt="Phone" class="ask-contacts__link-img"><span
                 class="ask-contacts__link-text">063-274-35-21</span>
             </a>
             <a href="https://t.me/kuznetsuniversity" class="ask-contacts__link" target="_blank">
-              <img src="./img/ask/telega.png" alt="" class="ask-contacts__link-img"><span
+              <img src="./assets/img/ask/telega.png" alt="Telegram" class="ask-contacts__link-img"><span
                 class="ask-contacts__link-text">@kuznetsuniversity</span>
             </a>
             <a href="mailto:kuznets.event@gmail.com" class="ask-contacts__link" target="_blank">
-              <img src="./img/ask/email.png" alt="" class="ask-contacts__link-img"><span
+              <img src="./assets/img/ask/email.png" alt="Email" class="ask-contacts__link-img"><span
                 class="ask-contacts__link-text">kuznets.event@gmail.com</span>
             </a>
           </div>
           <div class="ask-contacts__contacts">
             <h3 class="ask-contacts__subtitle">Наша адреса</h3>
             <a href="https://goo.gl/maps/q4XBB7fKnnt7wPQL7" class="ask-contacts__link" target="_blank">
-              <img src="./img/ask/map.png" alt="" class="ask-contacts__link-img"><span
+              <img src="./assets/img/ask/map.png" alt="Map" class="ask-contacts__link-img"><span
                 class="ask-contacts__link-text">м.
                 Харків, ст.м. Наукова,<br>
                 Інженерний провулок, 1-А</span>
@@ -169,7 +168,7 @@
         </div>
         <!-- /.ask__contacts -->
         <div class="ask__img">
-          <img src="./img/ask/ask-bg.png" alt="Виникли питання" class="ask__img-img">
+          <img src="./assets/img/ask/ask-bg.png" alt="Виникли питання" class="ask__img-img">
         </div>
         <!-- /.ask__img -->
       </div>
@@ -188,29 +187,30 @@
         <div class="footer__links">
           <a href="https://t.me/kuznetsuniversity" target="_blank"><i class="fab fa-telegram fa-3x"
               data-social="true"></i></a>
-          <!-- <img src="./img/footer/social/telegram.png" alt="Мы в телеграм"> -->
+          <!-- <img src="./assets/img/footer/social/telegram.png" alt="Мы в телеграм"> -->
         </div>
         <div class="footer__links">
           <a href="https://www.instagram.com/Kuznets.university/" target="_blank"><i class="fab fa-instagram fa-3x"
               data-social="true"></i></a>
-          <!-- <img src="./img/footer/social/insta.png" alt="Мы в инстаграм"> -->
+          <!-- <img src="./assets/img/footer/social/insta.png" alt="Мы в инстаграм"> -->
         </div>
         <div class="footer__links">
           <a href="https://www.facebook.com/Kuznetsuniversity-105881734282909/" target="_blank"><i
               class="fab fa-facebook fa-3x" data-social="true"></i></a>
-          <!-- <img src="./img/footer/social/facebook.png" alt="МЫ в фасебук"> -->
+          <!-- <img src="./assets/img/footer/social/facebook.png" alt="МЫ в фасебук"> -->
         </div>
         <div class="footer__links">
           <a href="https://www.youtube.com/channel/UCBd4cmZehgcG9mPSOGQvGXQ" target="_blank"><i
               class="fab fa-youtube fa-3x" data-social="true"></i></a>
-          <!-- <img src="./img/footer/social/youtube.png" alt="Мы в ютуб"> -->
+          <!-- <img src="./assets/img/footer/social/youtube.png" alt="Мы в ютуб"> -->
         </div>
       </div>
       <!-- /.footer-links -->
       <div class="footer-block">
         <span class="footer__rights">All rights reserved &copy;</span>
         <div class="footer-sign">
-          <a href="https://github.com/JamesHow1ett" class="footer-sign__link" target="_blank" data-sign="true">Created by Alexandr
+          <a href="https://github.com/JamesHow1ett" class="footer-sign__link" target="_blank" data-sign="true">Created
+            by Alexandr
             Skorokhod
           </a>
         </div>
@@ -221,8 +221,7 @@
   <!-- /.footer -->
   <!-- script's here -->
   <script src="./js/toMail.js"></script>
-  <script src="https://unpkg.com/imask"></script>
-  <script src="./js/main.js"></script>
+  <script src="./js/index.js"></script>
   <!-- /scripts -->
 </body>
 

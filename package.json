@@ -1,0 +1,37 @@
+{
+  "name": "landingkhneu",
+  "version": "1.1.0",
+  "description": "The diploma project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesHow1ett/landingKHNEU.git"
+  },
+  "author": "Oleksandr Skorokhod",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JamesHow1ett/landingKHNEU/issues"
+  },
+  "homepage": "https://github.com/JamesHow1ett/landingKHNEU#readme",
+  "scripts": {
+    "lint": "eslint js",
+    "serve": "webpack serve",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.18.9",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "node-sass": "^7.0.1",
+    "postcss-loader": "^7.0.1",
+    "postcss-preset-env": "^7.7.2",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  }
+}
