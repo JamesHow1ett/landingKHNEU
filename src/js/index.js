@@ -1,5 +1,5 @@
 import { SOURCE_URLS } from './utils/constants';
-import PhoneMask from './helpers/phoneMask';
+import { registrationFormHandler } from './toMail';
 
 // DOM Elements
 const anchors = document.querySelectorAll('a[href*="#"]');
@@ -7,6 +7,7 @@ const goToTopButton = document.getElementById('go-to-top');
 const iconBar = document.getElementById('icon-bar');
 const aboutCard = document.querySelectorAll('div.about-card');
 const footerInfo = document.querySelector('.footer-info');
+const registationForm = document.getElementById('register-form');
 
 /**
  * Add listeners for anchors lick
@@ -41,7 +42,7 @@ function goToTop() {
   });
 }
 
-const showGoToTopButton = () => {
+export const showGoToTopButton = () => {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     goToTopButton.style.display = 'block';
     goToTopButton.addEventListener('click', goToTop);
@@ -54,7 +55,7 @@ const showGoToTopButton = () => {
 /**
  * Show stick navbar after user scroll the page
  */
-const showStickyNavbar = () => {
+export const showStickyNavbar = () => {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     iconBar.classList.add('icon-bar-sticky');
   } else {
@@ -62,9 +63,6 @@ const showStickyNavbar = () => {
     iconBar.style.display = 'none';
   }
 };
-
-// TODO: complete
-const phoneMask = new PhoneMask('phone-mask', '+(380)XX-XXX-XXXX');
 
 // TODO: Handle by css
 const hoverCards = () => {
@@ -74,9 +72,13 @@ const hoverCards = () => {
     };
     aboutCard[i].onmouseover = () => {
       if (i === 1 || i === 2) {
-        aboutCard[i].style.cssText = 'cursor: pointer; transition: all 1s ease-out; background: rgba(171, 137, 218, 0.7);';
+        aboutCard[i].style.cssText = `
+          cursor: pointer; transition: all 1s ease-out; background: rgba(171, 137, 218, 0.7);
+        `;
       } else {
-        aboutCard[i].style.cssText = 'cursor: pointer; transition: all 1s ease; background: rgba(0, 120, 201, 0.7);';
+        aboutCard[i].style.cssText = `
+          cursor: pointer; transition: all 1s ease; background: rgba(0, 120, 201, 0.7);
+        `;
       }
     };
   }
@@ -106,7 +108,9 @@ const underLine = ({ target }) => {
   }
 
   if (sign) {
-    signLink.style.cssText = 'text-decoration: underline; transition: all 0.3s linear; color: #0000ff;';
+    signLink.style.cssText = `
+        text-decoration: underline; transition: all 0.3s linear; color: #0000ff;
+      `;
   } else {
     signLink.style.cssText = '';
   }
@@ -115,7 +119,7 @@ const underLine = ({ target }) => {
 /**
  * Add listenets after DOMContentLoaded
  */
-const init = () => {
+export const init = () => {
   hoverCards();
   createLinkCard();
   anchorClick(anchors);
@@ -123,13 +127,6 @@ const init = () => {
   footerInfo.addEventListener('mousemove', (event) => {
     underLine(event);
   });
+
+  registationForm.addEventListener('submit', registrationFormHandler);
 };
-
-document.addEventListener('DOMContentLoaded', () => {
-  init();
-});
-
-document.addEventListener('scroll', () => {
-  showGoToTopButton();
-  showStickyNavbar();
-});
