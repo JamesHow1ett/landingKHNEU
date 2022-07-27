@@ -1,7 +1,7 @@
 {
-  "name": "landingkhneu",
-  "version": "1.1.0",
-  "description": "The diploma project",
+  "name": "skoroforms-promo",
+  "version": "1.2.0",
+  "description": "The promo project for the SkoroForms",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JamesHow1ett/landingKHNEU.git"
@@ -25,7 +25,7 @@
     "@babel/preset-env": "^7.18.9",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^10.2.0",
+    "copy-webpack-plugin": "^10.2.4",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "eslint": "^8.7.0",

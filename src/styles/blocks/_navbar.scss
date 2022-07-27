@@ -4,12 +4,12 @@
   display: grid;
   grid-template-rows: 1fr 6fr;
   grid-column: 2/3;
-
-  /* background: url("../../../assets/img/hero/bg-header.png"); */
-
+  background: url("../assets/img/hero/bg-header.png");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+
+  @include bold;
 
   &-bg {
     grid-column: 1/4;
@@ -18,24 +18,25 @@
   }
 
   &-nav {
+    /* fix grid */
     grid-column: 2/3;
     grid-row: 1/2;
     justify-self: flex-end;
     align-self: center;
-    margin: 40px auto;
+    min-height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
 
     &__link {
-      margin-right: 20px;
       font-size: 2.2em;
       color: $secondary;
       text-decoration: none;
 
       &:hover {
         text-decoration: underline;
-      }
-
-      &:last-child {
-        margin-right: 0;
       }
     }
   }
@@ -80,12 +81,9 @@
 }
 
 .icon-bar-sticky {
-  display: grid !important;
-  grid-template-columns: repeat(5, auto);
-  grid-column: 1/4;
-  grid-row: 1/1;
-  justify-items: center;
-  align-self: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: inherit;
   background-color: $primary;
   overflow: hidden;

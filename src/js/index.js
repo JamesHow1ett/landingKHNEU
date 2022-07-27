@@ -1,11 +1,9 @@
-import { SOURCE_URLS } from './utils/constants';
 import { registrationFormHandler } from './toMail';
 
 // DOM Elements
 const anchors = document.querySelectorAll('a[href*="#"]');
 const goToTopButton = document.getElementById('go-to-top');
 const iconBar = document.getElementById('icon-bar');
-const aboutCard = document.querySelectorAll('div.about-card');
 const footerInfo = document.querySelector('.footer-info');
 const registationForm = document.getElementById('register-form');
 
@@ -16,8 +14,8 @@ const registationForm = document.getElementById('register-form');
  */
 function anchorClick(listOfAnchors) {
   listOfAnchors.forEach((anchor) => {
-    anchor.addEventListener('click', ({ preventDefault }) => {
-      preventDefault();
+    anchor.addEventListener('click', (event) => {
+      event.preventDefault();
 
       const blockID = anchor.getAttribute('href') ?? '';
       document.querySelector(`${blockID}`).scrollIntoView({
@@ -60,39 +58,7 @@ export const showStickyNavbar = () => {
     iconBar.classList.add('icon-bar-sticky');
   } else {
     iconBar.classList.remove('icon-bar-sticky');
-    iconBar.style.display = 'none';
   }
-};
-
-// TODO: Handle by css
-const hoverCards = () => {
-  for (let i = 0; i < aboutCard.length; i += 1) {
-    aboutCard[i].onmouseout = () => {
-      aboutCard[i].style.background = '';
-    };
-    aboutCard[i].onmouseover = () => {
-      if (i === 1 || i === 2) {
-        aboutCard[i].style.cssText = `
-          cursor: pointer; transition: all 1s ease-out; background: rgba(171, 137, 218, 0.7);
-        `;
-      } else {
-        aboutCard[i].style.cssText = `
-          cursor: pointer; transition: all 1s ease; background: rgba(0, 120, 201, 0.7);
-        `;
-      }
-    };
-  }
-};
-
-function openSourceUrl() {
-  const { category } = this.dataset;
-  window.open(SOURCE_URLS[category], '_blank');
-}
-
-const createLinkCard = () => {
-  aboutCard.forEach((item) => {
-    item.addEventListener('click', openSourceUrl);
-  });
 };
 
 // TODO: handle by css
@@ -120,8 +86,6 @@ const underLine = ({ target }) => {
  * Add listenets after DOMContentLoaded
  */
 export const init = () => {
-  hoverCards();
-  createLinkCard();
   anchorClick(anchors);
 
   footerInfo.addEventListener('mousemove', (event) => {
