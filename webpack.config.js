@@ -1,7 +1,7 @@
-const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -46,9 +46,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Kuznets junior university',
+      title: 'Skoro-Forms',
       template: path.resolve(__dirname, './src/template/index.html'), // template file
       filename: 'index.html', // output file
+    }),
+    new CopyPlugin({
+      patterns: [{ from: './src/assets', to: './assets' }],
     }),
     new CleanWebpackPlugin(),
   ],

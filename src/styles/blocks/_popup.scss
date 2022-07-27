@@ -1,0 +1,95 @@
+.popup-wrapper {
+  position: absolute;
+  top: 1000px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0 0 0 / 45%);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-menu {
+  width: 600px;
+  height: 400px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    flex: 0 0 70px;
+    display: flex;
+    align-items: center;
+    background-color: $primary;
+    color: white;
+    padding: 0 10px;
+  }
+
+  .header {
+    &__title {
+      flex: 1 1 auto;
+    }
+
+    &__btn {
+      flex: 0 0 70px;
+      border: 1px solid transparent;
+      background: transparent;
+      transition: 0.2s ease;
+
+      &:hover {
+        border-color: black;
+      }
+    }
+  }
+
+  &__body {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+
+    span {
+      @include bold;
+
+      span.underline {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__actions {
+    flex: 0 0 50px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 0 10px;
+
+    button {
+      color: white;
+    }
+
+    button.confirm {
+      background-color: #060;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: rgba(#060, 80%);
+      }
+    }
+
+    button.cancel {
+      background-color: red;
+    }
+  }
+
+  button {
+    font-size: 24px;
+    text-transform: capitalize;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

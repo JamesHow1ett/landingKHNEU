@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="X-EN-Compatible" content="ie=edge">
   <title><%= htmlWebpackPlugin.options.title %></title>
-  <!-- <title></title> -->
-  <meta name="description" content="Kuznets junior university – креативний простір для навчання новим навичкам">
-  <meta name="keywords"
-    content="освіта для дітей, навчання та розвиток дитини, ЗНО/ДПА, ЗНО, робототехніка,друк на 3D принтері, мовні курси, курси язика, курси англійської мови, курси німецької мови, курси іспанської мови, курси арабської мови, курси французької мови, курси польської мови, курси болгарської мови, підготовка до зовнішнього незалежного оцінювання, курси економіки для дітей, економіка для дітей, Kuznets junior university, Харків, ХНЕУ, образование для детей, обучение и развитие ребенка, ВНО / ДПА, ЗНО,робототехника, курсы робототехники, печать на 3D принтере, языковые курсы, курсы языка, курсы английского языка, курсы немецкого языка, курсы испанского языка, курсы арабского языка, курсы французского языка, курсы польского языка, курсы болгарского языка, подготовка к внешнему независимому оцениванию, курсы экономики для детей, экономика для детей, Kuznets university, Kuznets junior university, Харьков, ХНЭУ">
+  <meta name="description" content="Skoro-Forms - a service for fast creating and using forms">
+  <meta name="keywords" content="form, forms, web-forms, skorokhod, easy-from">
   <link rel="shortcut icon" href="./assets/img/favicon/favicon.png" type="image/png">
   <link rel="stylesheet" href="./css/style.css" type="text/html">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -19,18 +17,16 @@
   <header class="header main" id="header">
     <div class="header-bg"></div>
     <nav class="header-nav" id="nav-bar">
-      <a href="#header" class="header-nav__link">Головна</a>
-      <a href="#info" class="header-nav__link">Про нас</a>
-      <a href="#about" class="header-nav__link">Наші курси</a>
-      <a href="#register" class="header-nav__link">Реєстрація</a>
-      <a href="#ask" class="header-nav__link">Контакти</a>
+      <a href="#info" class="header-nav__link">About</a>
+      <a href="#ask" class="header-nav__link">Contacts</a>
+      <a href="#register" class="header-nav__link">Sing up</a>
+      <a href="#" class="header-nav__link">Sing in</a>
     </nav>
     <div class="icon-bar" id="icon-bar">
-      <a href="#header"><i class="fas fa-home"></i></a>
       <a href="#info"><i class="fas fa-user"></i></a>
-      <a href="#about"><i class="fas fa-clipboard-list"></i></a>
       <a href="#register"><i class="fas fa-lock"></i></a>
       <a href="#ask"><i class="fas fa-envelope"></i></a>
+      <a href="#"><i class="fas fa-sign-in-alt"></i></a>
     </div>
     <!-- /.header-nav -->
     <button id="go-to-top" title="Go to top">
@@ -43,69 +39,20 @@
   <main class="main">
     <section class="section" id="info">
       <div class="info">
-        <h1 class="info__title">Kuznets junior university</h1>
-        <!-- /.info__title -->
-        <span class="info__subtitle">Креативний простір для навчання новим навичкам</span>
-        <!-- /.info__subtitle -->
+        <h1 class="info__title">Skoro-Forms</h1>
+        <span class="info__subtitle">It is a service for fast-creating and customizing web forms.</span>
         <div class="info__content">
           <div class="info__logo">
             <img src="./assets/img/info/info-img.png" alt="">
           </div>
           <div class="info__text">
-            <p class="info__text-text">Наші курси допоможуть вам <br> перестрибнути на новий <br> рівень розвитку
-            </p>
-            <p class="info__text-text">Ми використовуємо <br> найсучасніші методики <br> та новітні технології
-              навчання
+            <p class="info__text-text">
+              With our service, you can create any forms, such as registrations forms, or questionnaires, and store your customer's answers in our DB.
             </p>
           </div>
-          <!-- /.info__text 1-->
         </div>
-        <!-- /.info__content -->
       </div>
-      <!-- /.info -->
     </section>
-    <!-- /.section -->
-
-    <section class="section" id="about">
-      <div class="about">
-        <div class="about-card about-card__first" id="online" data-category="online">
-          <img src="./assets/img/about/online.png" alt="ON-line курси" class="about-card__img">
-          <a href="https://online.hneu.edu.ua/">
-            <h2 class="about-card__title">ON-line курси нового покоління</h2>
-          </a>
-          <!-- /.about-card__title -->
-        </div>
-        <!-- /.about-card -->
-        <div class="about-card about-card__dark" id="language" data-category="language">
-          <img src="./assets/img/about/leng.png" alt="Мовні курси" class="about-card__img">
-          <a href="">
-            <h2 class="about-card__title about-card__title-secondary">Мовні курси</h2>
-          </a>
-          <!-- /.about-card__title -->
-        </div>
-        <!-- /.about-card -->
-        <div class="about-card about-card__dark about-card__third" id="robot" data-category="robot">
-          <img src="./assets/img/about/3d.png" alt="Курси робототехніки" class="about-card__img">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScHMsJxJEp7mTqbay10gtTVnFS2EKQ7bcLG9HM_Pyvk3yiApw/viewform">
-            <h2 class="about-card__title about-card__title-secondary">Курси робототехніки<br>
-              Моделювання<br>та друк на 3D
-              принтері</h2>
-          </a>
-          <!-- /.about-card__title -->
-        </div>
-        <!-- /.about-card -->
-        <div class="about-card about-card__last" id="zno" data-category="zno">
-          <img src="./assets/img/about/zno.png" alt="Підготовка до ЗНО/ДПА" class="about-card__img">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScuDl9k0k8HEAsrJLCH0PloVrfqopcmG5G-SDh37p_QsBSPig/viewform">
-            <h2 class="about-card__title">Підготовка<br>до ЗНО/ДПА</h2>
-          </a>
-          <!-- /.about-card__title -->
-        </div>
-        <!-- /.about-card -->
-      </div>
-      <!-- /.about -->
-    </section>
-    <!-- /.section -->
 
     <section class="section" id="register">
       <div class="register__block register-block">
@@ -113,106 +60,84 @@
           <img src="./assets/img/register/register.png" alt="Реєстрація" class="register-img__img">
         </div>
         <div class="register-form">
-          <h2 class="register-form__title">Реєстрація</h2>
-          <span class="register-form__subtitle">Пройдіть реєстрацію і ми вам розкажемо<br>про наші переваги та умови
-            навчання</span>
+          <h2 class="register-form__title">Sign up</h2>
+          <span class="register-form__subtitle">
+            Do create a new account<br />
+            And get access to all features in Skoro-Forms
+          </span>
           <!-- form Start -->
           <form id="register-form" class="form register-form__form">
-            <input name="user_firstName" type="text" placeholder="Ім'я" class="input form__input" required>
-            <input name="user_lastName" type="text" placeholder="Прізвище" class="input form__input" required>
-            <input name="user_password" type="password" placeholder="Password" class="input form__input" required>
+            <input name="user_firstName" type="text" placeholder="First Name" class="input form__input" required>
+            <input name="user_lastName" type="text" placeholder="Last Name" class="input form__input" required>
+            <input name="user_password" type="password" autocomplete="new-password" placeholder="Password" class="input form__input" required>
             <input name="user_email" type="text" placeholder="E-mail" class="input form__input" required>
-            <input type="submit" class="button form__button" value="Зареєструватись"></input>
+            <button type="submit" class="button form__button">Sing up</button>
           </form>
           <!-- form END -->
         </div>
-        <!-- /.register-block__form -->
       </div>
     </section>
-    <!-- /.section -->
 
     <section class="section" id="ask">
       <div class="ask-block">
         <div class="ask-contacts">
-          <h2 class="ask-contacts__title">Виникли питання?</h2>
+          <h2 class="ask-contacts__title">Do you want to join Skoro-Forms?</h2>
           <div class="ask-contacts__contacts">
-            <h3 class="ask-contacts__subtitle">Наші контакти</h3>
-            <a href="tel:+380632743521" class="ask-contacts__link" target="_blank">
-              <img src="./assets/img/ask/phone.png" alt="Phone" class="ask-contacts__link-img"><span
-                class="ask-contacts__link-text">063-274-35-21</span>
+            <h3 class="ask-contacts__subtitle">Our contacts</h3>
+            <a href="tel:+380952168010" class="ask-contacts__link" target="_blank">
+              <img src="./assets/img/ask/phone.png" alt="Phone" class="ask-contacts__link-img">
+              <span class="ask-contacts__link-text">+380 95-216-80-10</span>
             </a>
-            <a href="https://t.me/kuznetsuniversity" class="ask-contacts__link" target="_blank">
-              <img src="./assets/img/ask/telega.png" alt="Telegram" class="ask-contacts__link-img"><span
-                class="ask-contacts__link-text">@kuznetsuniversity</span>
-            </a>
-            <a href="mailto:kuznets.event@gmail.com" class="ask-contacts__link" target="_blank">
-              <img src="./assets/img/ask/email.png" alt="Email" class="ask-contacts__link-img"><span
-                class="ask-contacts__link-text">kuznets.event@gmail.com</span>
-            </a>
-          </div>
-          <div class="ask-contacts__contacts">
-            <h3 class="ask-contacts__subtitle">Наша адреса</h3>
-            <a href="https://goo.gl/maps/q4XBB7fKnnt7wPQL7" class="ask-contacts__link" target="_blank">
-              <img src="./assets/img/ask/map.png" alt="Map" class="ask-contacts__link-img"><span
-                class="ask-contacts__link-text">м.
-                Харків, ст.м. Наукова,<br>
-                Інженерний провулок, 1-А</span>
+            <a href="mailto:skoro_forms.dev@gmail.com" class="ask-contacts__link" target="_blank">
+              <img src="./assets/img/ask/email.png" alt="Email" class="ask-contacts__link-img">
+              <span class="ask-contacts__link-text">skoro_forms.dev@gmail.com</span>
             </a>
           </div>
         </div>
-        <!-- /.ask__contacts -->
         <div class="ask__img">
           <img src="./assets/img/ask/ask-bg.png" alt="Виникли питання" class="ask__img-img">
         </div>
-        <!-- /.ask__img -->
       </div>
-      <!-- /.ask-block -->
     </section>
-    <!-- /.section -->
   </main>
-  <!-- /main -->
 
   <footer class="footer">
     <div class="footer-info">
       <div class="footer-links">
         <div class="footer-links-text">
-          <span class="footer-links-caption">Ми в соціальних мережах</span>
+          <span class="footer-links-caption">Our socials</span>
         </div>
         <div class="footer__links">
-          <a href="https://t.me/kuznetsuniversity" target="_blank"><i class="fab fa-telegram fa-3x"
-              data-social="true"></i></a>
-          <!-- <img src="./assets/img/footer/social/telegram.png" alt="Мы в телеграм"> -->
+          <a href="https://t.me/kuznetsuniversity" target="_blank">
+            <i class="fab fa-telegram fa-3x" data-social="true"></i>
+          </a>
         </div>
         <div class="footer__links">
-          <a href="https://www.instagram.com/Kuznets.university/" target="_blank"><i class="fab fa-instagram fa-3x"
-              data-social="true"></i></a>
-          <!-- <img src="./assets/img/footer/social/insta.png" alt="Мы в инстаграм"> -->
+          <a href="https://www.instagram.com/Kuznets.university/" target="_blank">
+            <i class="fab fa-instagram fa-3x" data-social="true"></i>
+          </a>
         </div>
         <div class="footer__links">
-          <a href="https://www.facebook.com/Kuznetsuniversity-105881734282909/" target="_blank"><i
-              class="fab fa-facebook fa-3x" data-social="true"></i></a>
-          <!-- <img src="./assets/img/footer/social/facebook.png" alt="МЫ в фасебук"> -->
+          <a href="https://www.facebook.com/Kuznetsuniversity-105881734282909/" target="_blank">
+            <i class="fab fa-facebook fa-3x" data-social="true"></i>
+          </a>
         </div>
         <div class="footer__links">
-          <a href="https://www.youtube.com/channel/UCBd4cmZehgcG9mPSOGQvGXQ" target="_blank"><i
-              class="fab fa-youtube fa-3x" data-social="true"></i></a>
-          <!-- <img src="./assets/img/footer/social/youtube.png" alt="Мы в ютуб"> -->
-        </div>
-      </div>
-      <!-- /.footer-links -->
-      <div class="footer-block">
-        <span class="footer__rights">All rights reserved &copy;</span>
-        <div class="footer-sign">
-          <a href="https://github.com/JamesHow1ett" class="footer-sign__link" target="_blank" data-sign="true">Created
-            by Alexandr
-            Skorokhod
+          <a href="https://www.youtube.com/channel/UCBd4cmZehgcG9mPSOGQvGXQ" target="_blank">
+            <i class="fab fa-youtube fa-3x" data-social="true"></i>
           </a>
         </div>
       </div>
-      <!-- /.footer-block -->
+      <div class="footer-block">
+        <span class="footer__rights">All rights reserved &copy;</span>
+        <div class="footer-sign">
+          <a href="https://github.com/JamesHow1ett" class="footer-sign__link" target="_blank" data-sign="true">
+            Created by Alexandr Skorokhod
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
-  <!-- /.footer -->
 </body>
 
 </html>
