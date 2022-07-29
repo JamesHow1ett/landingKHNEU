@@ -20,13 +20,15 @@
       <a href="#info" class="header-nav__link">About</a>
       <a href="#ask" class="header-nav__link">Contacts</a>
       <a href="#register" class="header-nav__link">Sing up</a>
-      <a href="#" class="header-nav__link">Sing in</a>
+      <!-- FIXME: add link to login page -->
+      <a href="http://localhost:8080" class="header-nav__link">Sing in</a>
     </nav>
     <div class="icon-bar" id="icon-bar">
       <a href="#info"><i class="fas fa-user"></i></a>
       <a href="#register"><i class="fas fa-lock"></i></a>
       <a href="#ask"><i class="fas fa-envelope"></i></a>
-      <a href="#"><i class="fas fa-sign-in-alt"></i></a>
+      <!-- FIXME: add link to login page -->
+      <a href="http://localhost:8080"><i class="fas fa-sign-in-alt"></i></a>
     </div>
     <!-- /.header-nav -->
     <button id="go-to-top" title="Go to top">
@@ -67,10 +69,39 @@
           </span>
           <!-- form Start -->
           <form id="register-form" class="form register-form__form">
-            <input name="user_firstName" type="text" placeholder="First Name" class="input form__input" required>
-            <input name="user_lastName" type="text" placeholder="Last Name" class="input form__input" required>
-            <input name="user_password" type="password" autocomplete="new-password" placeholder="Password" class="input form__input" required>
-            <input name="user_email" type="text" placeholder="E-mail" class="input form__input" required>
+            <input
+              name="user_firstName"
+              type="text"
+              placeholder="First Name"
+              class="input form__input"
+              data-valid-type="required"
+              required
+            >
+            <input
+              name="user_lastName"
+              type="text"
+              placeholder="Last Name"
+              class="input form__input"
+              data-valid-type="required"
+              required
+            >
+            <input
+              name="user_password"
+              type="password"
+              autocomplete="new-password"
+              placeholder="Password"
+              class="input form__input"
+              data-valid-type="password"
+              required
+            >
+            <input
+              name="user_email"
+              type="text"
+              placeholder="E-mail"
+              class="input form__input"
+              data-valid-type="email"
+              required
+            >
             <button type="submit" class="button form__button">Sing up</button>
           </form>
           <!-- form END -->
