@@ -44,6 +44,16 @@
     background-color: $bg-primary;
     border-bottom: 1px solid $primary;
     outline: none;
+
+    &.valid {
+      border: 1px solid $success;
+      border-radius: 10px;
+    }
+
+    &.invalid {
+      border: 1px dashed $error;
+      border-radius: 10px;
+    }
   }
 
   &__input:focus {

@@ -1,4 +1,4 @@
-import { registrationFormHandler } from './toMail';
+import { registrationFormHandler } from './helpers/sendForm';
 
 // DOM Elements
 const anchors = document.querySelectorAll('a[href*="#"]');
@@ -40,7 +40,7 @@ function goToTop() {
   });
 }
 
-export const showGoToTopButton = () => {
+const showGoToTopButton = () => {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     goToTopButton.style.display = 'block';
     goToTopButton.addEventListener('click', goToTop);
@@ -53,7 +53,7 @@ export const showGoToTopButton = () => {
 /**
  * Show stick navbar after user scroll the page
  */
-export const showStickyNavbar = () => {
+const showStickyNavbar = () => {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     iconBar.classList.add('icon-bar-sticky');
   } else {
@@ -86,6 +86,11 @@ const underLine = ({ target }) => {
  * Add listenets after DOMContentLoaded
  */
 export const init = () => {
+  document.addEventListener('scroll', () => {
+    showGoToTopButton();
+    showStickyNavbar();
+  });
+
   anchorClick(anchors);
 
   footerInfo.addEventListener('mousemove', (event) => {
