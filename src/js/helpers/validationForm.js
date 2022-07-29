@@ -4,7 +4,7 @@ const doNotValidate = () => true;
 
 /**
  * Apply validation function to passed fields
- * @param {HTMLElement[]} fields - fields to validate
+ * @param {HTMLInputElement[]} fields - fields to validate
  * @returns {Boolean} return true if all fields will pass the validation function
  * @thows Error if some of fields is NOT valid
  */
