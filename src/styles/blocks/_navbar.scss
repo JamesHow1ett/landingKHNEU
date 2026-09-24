@@ -1,10 +1,13 @@
+@use '../colors' as *;
+@use '../fonts' as *;
+
 .header {
   width: 1140px;
   max-height: 85vh;
   display: grid;
   grid-template-rows: 1fr 6fr;
   grid-column: 2/3;
-  background: url("../assets/img/hero/bg-header.png");
+  background: url('../../assets/img/hero/bg-header.png');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -21,8 +24,7 @@
     /* fix grid */
     grid-column: 2/3;
     grid-row: 1/2;
-    justify-self: flex-end;
-    align-self: center;
+    place-self: center flex-end;
     min-height: 80px;
     width: 100%;
     display: flex;

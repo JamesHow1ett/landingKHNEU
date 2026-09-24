@@ -15,9 +15,7 @@ export function validateFormInputs(fields) {
     /**
      * @type {(value: String) => Boolean}
      */
-    const validator = field.dataset.validType
-      ? validators[field.dataset.validType]
-      : doNotValidate;
+    const validator = field.dataset.validType ? validators[field.dataset.validType] : doNotValidate;
 
     if (validator(field.value)) {
       field.classList.remove('invalid');

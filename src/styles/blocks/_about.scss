@@ -1,3 +1,6 @@
+@use '../colors' as *;
+@use '../fonts' as *;
+
 .about {
   display: grid;
   grid-template-columns: 4fr 4fr;

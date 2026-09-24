@@ -1,3 +1,6 @@
+@use '../colors' as *;
+@use '../fonts' as *;
+
 .popup-wrapper {
   position: absolute;
   top: 1000px;

@@ -1,7 +1,23 @@
+@use 'colors' as *;
+@use 'fonts' as *;
+
 body {
-  background: url("../assets/img/body/bg-blue.png");
+  background: url('../assets/img/body/bg-blue.png');
   background-color: $bg-primary;
   z-index: -999;
+
+  @include light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal; // single-weight faces; avoid faux bold
+
+  @include bold;
 }
 
 .body {

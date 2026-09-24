@@ -1,1 +1,1 @@
-export const getEnv = (name) => process.env[name];
+export const getEnv = (name) => import.meta.env[name];
