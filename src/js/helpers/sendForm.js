@@ -32,7 +32,6 @@ export function registrationFormHandler(event) {
   const inputs = Array.from(this.children)
     .filter((child) => child.tagName === 'INPUT')
     .map((child) => {
-      // eslint-disable-next-line no-param-reassign
       child.value = child.value.trim();
 
       return child;
